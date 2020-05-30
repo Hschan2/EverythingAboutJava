@@ -21,6 +21,7 @@ public class ClientClass {
 		OutputStream outputStream = null;
 		DataOutputStream dataOutputStream = null;
 		
+		// 메세지 입력을 위한 스캐너
 		Scanner scanner = null;
 		
 		// 네트워크와 관련된 코드는 예외 처리 필수
@@ -48,7 +49,7 @@ public class ClientClass {
 				String inMessage = dataInputStream.readUTF();
 				System.out.println("inMessage : " + inMessage);
 				
-				if (outMessage.equals("STOP")) break; 
+				if (outMessage.equals("STOP")) break; // STOP을 메세지로 보내면 종료
 			}
 		} catch (Exception e) {
 			// TODO: handle exception

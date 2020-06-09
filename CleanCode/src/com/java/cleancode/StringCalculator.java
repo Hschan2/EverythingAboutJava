@@ -50,4 +50,32 @@ public class StringCalculator {
 		for(int number : numbers) result += number;
 		return result;
 	}
+	
+	// Positive class를 이용해 객체지향적인 코드로
+	public static int objectAdd(String text) {
+		if(isBlank2(text)) return 0;
+		return sum2(toInts2(text.split(",|:")));
+	}
+	
+	public static boolean isBlank2(String text) {
+		return text == null || text.isEmpty();
+	}
+	
+	// goodAdd의 toInts와 toInt를 Positive에서 수행함으로써 더욱 간단하게 이용
+	public static Positive[] toInts2(String[] values) {
+		Positive[] numbers = new Positive[values.length];
+		for(int i=0; i<values.length; i++) {
+			numbers[i] = new Positive(values[i]);
+		}
+		return numbers;
+	}
+	
+	// Positive의 add 함수로 덧셈을 실행하고 getNumber로 값을 받아서 출력
+	public static int sum2(Positive[] numbers) {
+		Positive result = new Positive(0); // 선언 및 초기화
+		for(Positive number : numbers) {
+			result = result.add(number);
+		}
+		return result.getNumber();
+	}
 }

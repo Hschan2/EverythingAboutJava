@@ -159,3 +159,7 @@ by1 > by2일 경우 음수를, 같으면 0을 크면 1을 리턴 => 리턴 값�
 |Comparable|데이터를 비교할 때|Arrays.sort(), compareTo()|Object, Wrapper Class 타입, compareTo() 오버라이딩|
 |Comparable|데이터를 비교할 때|Collections.sort()|Arrays.sort(), LinkedList, Vector 타입|
 |Comparator|비교 기준을 세울 때|compare()|compare() 오버라이딩|
+
+
+#### <span style="color:red">주의!</span>
+클래스를 만들 때 Comparable이라고 만들지 말자. 에러가 난다. 만들 때 ComparableClass처럼 다르게 만들자!

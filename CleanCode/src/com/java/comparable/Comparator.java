@@ -1,4 +1,3 @@
-package com.java.comparable;
 
 import java.util.Arrays;
 

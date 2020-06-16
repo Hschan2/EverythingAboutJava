@@ -1,5 +1,3 @@
-package com.java.comparable;
-
 public class Actor implements Comparable<Object>{
 	String name;
 	int age;

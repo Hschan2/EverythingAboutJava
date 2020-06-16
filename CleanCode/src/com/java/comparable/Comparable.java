@@ -1,4 +1,3 @@
-package com.java.comparable;
 
 import java.util.Arrays;
 
@@ -15,7 +14,7 @@ public class Comparable {
 	}
 	
 	public void Arrays2() {
-		Arrays.sort(s, String.CASE_INSENSITIVE_ORDER); // 대소문자 구분 없이 정렬. String.CASE_INSENSITIVE_ORDER => 대소문자 구분 없이 정렬하가ㅣ 위해
+		Arrays.sort(s, String.CASE_INSENSITIVE_ORDER); // 대소문자 구분 없이 정렬. String.CASE_INSENSITIVE_ORDER => 대소문자 구분 없이 정렬하기 위해
 		System.out.println(Arrays.toString(s)); // [A, C, D, F, a, b]
 	}
 	

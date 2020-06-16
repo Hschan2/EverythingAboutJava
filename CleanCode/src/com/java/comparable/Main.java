@@ -12,7 +12,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		// comparable => 데이터를 순서대로 정렬할 일이 생길 때 자주 사용
 		
-		Comparable comparable1 = new Comparable();
+		ComparableClass comparable1 = new ComparableClass();
 		comparable1.Arrays();
 		comparable1.Arrays2();
 		comparable1.ArraysReverse();

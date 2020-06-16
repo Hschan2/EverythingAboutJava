@@ -1,7 +1,8 @@
+package com.java.comparable;
 
 import java.util.Arrays;
 
-public class Comparable {
+public class ComparableClass {
 	// 기본적으로 정렬을 수행. 숫자 => 오름차순, 문자 => 알파벳 순
 	// primitive 타입, integer, string, list 등 정렬이 필요한 데이터는 모두 comparable 인터페이스를 implement
 	

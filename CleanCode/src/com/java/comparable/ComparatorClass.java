@@ -1,7 +1,9 @@
+package com.java.comparable;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
-public class Comparator {
+public class ComparatorClass {
 	Actor[] arr = new Actor[] {
 			new Actor("박보검", 1993),
 			new Actor("김수현", 1990),

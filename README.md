@@ -8,3 +8,4 @@
 - 다른 예제에서 Comparable를 자주 볼 수 있었다. 그렇다면 Comparable이란? [CleanCode]
 - WEB에서의 요청과 응답 [AboutWeb_R]
 - 빌드와 배포 [AboutWeb_R]
+- JDBC, SQLMAPPER, ORM [AboutWeb_R] => 어렵기 때문에 반복 

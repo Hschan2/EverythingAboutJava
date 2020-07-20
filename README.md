@@ -11,4 +11,6 @@
 - JDBC, SQLMAPPER, ORM [AboutWeb_R] => 어렵기 때문에 반복 
 - Servlet vs Spring [Servlet vs Spring] => 다시 공부 필요
 - 생활코딩에서 상속, 인터페이스, 예외를 복습 [AboutWeb_R]
+- What is the Spring? and Spring Boot? [AboutWeb_R]
 - JPA는? 왜 JPA를 사용해야 하는가? [AboutWeb_R]
+- 인프런에서 스프링 프레임워크를 배워보자 [JavaSpringFrameworkTest]

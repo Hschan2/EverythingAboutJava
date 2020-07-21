@@ -17,7 +17,7 @@ public class ExceptionMain {
 		try {
 			System.out.println(2/0);
 			System.out.println(scores[3]);
-		} catch (ExceptionMain e) { // 예외는 Exception가 부모 Exception
+		} catch (Exception e) { // 예외는 Exception가 부모 Exception
 			// TODO: handle exception
 			System.out.println("에러가 났어요. " + e.getMessage());
 			e.printStackTrace();
@@ -31,14 +31,14 @@ public class ExceptionMain {
 			f = new FileWriter("Checked.txt");
 			f.write("생활코딩");
 			// 여기서 예외가 발생하기 때문에 close는 finally로 처리해야
-		} catch (ExceptionMain e) {
+		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		} finally {
 			if (f != null) {
 				try {
 					f.close(); // try catch문을 사용하지 않으면 에러가 난다
-				} catch (ExceptionMain e2) {
+				} catch (Exception e2) {
 					// TODO: handle exception
 					e2.printStackTrace();
 				}
@@ -52,7 +52,7 @@ public class ExceptionMain {
 			f2.write("생활코딩");
 			f2.close(); // 위 ()안에 있는 것과 동일한 내용. 자동으로 close를 내부적으로 실행
 			// 위의 finally를 사용한 코드와 같은 기능을 한다. 코드는 짧지만 기능은 같음
-		} catch (ExceptionMain e) {
+		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}

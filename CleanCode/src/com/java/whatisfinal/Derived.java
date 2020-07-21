@@ -6,8 +6,8 @@ public class Derived extends Base { // Base 상속
 		
 	}
 	
-	@Override
-	public void m2() { // 오버라이딩, 즉 메서드 수정이 불가능한 이유 m2가 public final void, final로 선언됐기 때문에
-		
-	}
+//	@Override
+//	public void m2() { // 오버라이딩, 즉 메서드 수정이 불가능한 이유 m2가 public final void, final로 선언됐기 때문에
+//		
+//	}
 }

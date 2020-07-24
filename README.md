@@ -14,3 +14,4 @@
 - What is the Spring? and Spring Boot? [AboutWeb_R]
 - JPA는? 왜 JPA를 사용해야 하는가? [AboutWeb_R]
 - 인프런에서 스프링 프레임워크를 배워보자 [JavaSpringFrameworkTest]
+- 스프링에서 스프링 컨테이너(Bean 컨테이너)의 LifeCycle을 알아보자 [JavaSpringFrameworkTest]

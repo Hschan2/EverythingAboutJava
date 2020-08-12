@@ -1,4 +1,4 @@
-package com.mvc.mvc;
+package com.bs.lec17;
 
 import java.text.DateFormat;
 import java.util.Date;

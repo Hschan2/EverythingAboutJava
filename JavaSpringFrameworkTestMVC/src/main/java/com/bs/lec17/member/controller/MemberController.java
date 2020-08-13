@@ -4,10 +4,12 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bs.lec17.member.Member;
 import com.bs.lec17.member.service.MemberService;
@@ -15,13 +17,18 @@ import com.bs.lec17.member.service.MemberService;
 @Controller
 public class MemberController {
 
-//	MemberService service = new MemberService();
+//	MemberService service = new MemberService(); 예전 자바 버전
 //	@Autowired
 	@Resource(name="memService")
 	MemberService service;
 	
 	@RequestMapping(value="/memJoin", method=RequestMethod.POST)
 	public String memJoin(Model model, HttpServletRequest request) {
+//		HttpServletRequest request -> 사용자 요청에 대한 파라미터 받는 방법
+//		최근 자주 사용하는 방법(커맨드 객체) => public String memJoin(Member member) 로 선언하면 아래 getParameter도 필요 없다 -> getter, setter을 사용하는 방법. html의 name과 같을 때 프로퍼티 사용해 가져옴
+//		service.memberRegister(member.getMemId()...) 로 가져오면 된다
+//		model.addAttribute() 도 필요 없어진다
+		
 		String memId = request.getParameter("memId");
 		String memPw = request.getParameter("memPw");
 		String memMail = request.getParameter("memMail");
@@ -41,6 +48,9 @@ public class MemberController {
 	
 	@RequestMapping(value="/memLogin", method=RequestMethod.POST)
 	public String memLogin(Model model, HttpServletRequest request) {
+//		HttpServletRequest request 대신 @RequestParam("memId") String memId(받을 데이터 타입 선언) 로 대체 가능
+//		위 방법으로 할 때 String memId = request.getParameter("memId"); 불필요
+//		@RequestParam(value="memId", Required=true, defaultValue = "1234") required -> 필수냐 아니냐, defaultValue -> 넘어온 값이 없을 시 
 		
 		String memId = request.getParameter("memId");
 		String memPw = request.getParameter("memPw");

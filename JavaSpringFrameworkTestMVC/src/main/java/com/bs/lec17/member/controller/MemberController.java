@@ -1,5 +1,9 @@
 package com.bs.lec17.member.controller;
 
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
@@ -11,20 +15,87 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.bs.lec17.member.Member;
 import com.bs.lec17.member.service.MemberService;
 
 @Controller
 public class MemberController {
-
-//	MemberService service = new MemberService(); 예전 자바 버전
-//	@Autowired
-	@Resource(name="memService")
+	
+	@Autowired
 	MemberService service;
 	
-	@RequestMapping(value="/memJoin", method=RequestMethod.POST)
-	public String memJoin(@ModelAttribute("mem") Member member) {
+	@ModelAttribute("serverTime")
+	public String getServerTime(Locale locale) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		return dateFormat.format(date);
+	}
+	
+	@RequestMapping(value = "/memJoin", method = RequestMethod.POST)
+	public String memJoin(Member member) {
+		
+		service.memberRegister(member);
+		
+		return "memJoinOk";
+	}
+	
+	@RequestMapping(value = "/memLogin", method = RequestMethod.POST)
+	public String memLogin(Member member) {
+		
+		service.memberSearch(member);
+		
+		return "memLoginOk";
+	}
+	
+	@RequestMapping(value = "/memRemove", method = RequestMethod.POST)
+	public String memRemove(@ModelAttribute("mem") Member member) {
+		
+		service.memberRemove(member);
+		
+		return "memRemoveOk";
+	}
+	
+	/*
+	@RequestMapping(value = "/memModify", method = RequestMethod.POST)
+	public String memModify(Model model, Member member) {
+		
+		Member[] members = service.memberModify(member);
+		
+		model.addAttribute("memBef", members[0]);
+		model.addAttribute("memAft", members[1]);
+		
+		return "memModifyOk";
+	}
+	*/
+	
+	@RequestMapping(value = "/memModify", method = RequestMethod.POST)
+	public ModelAndView memModify(Member member) {
+		
+		Member[] members = service.memberModify(member);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("memBef", members[0]);
+		mav.addObject("memAft", members[1]);
+		
+		mav.setViewName("memModifyOk");
+		
+		return mav;
+	}
+
+	
+//	** 이전 버전
+	
+//	MemberService service = new MemberService(); 예전 자바 버전
+//	@Autowired
+//	@Resource(name="memService")
+//	MemberService service;
+//	
+//	@RequestMapping(value="/memJoin", method=RequestMethod.POST)
+//	public String memJoin(@ModelAttribute("mem") Member member) {
 //		public String memJoin(Model model, HttpServletRequest request) 기존 방법
 //		HttpServletRequest request -> 사용자 요청에 대한 파라미터 받는 방법
 //		최근 자주 사용하는 방법(커맨드 객체) => public String memJoin(Member member) 로 선언하면 아래 getParameter도 필요 없다 -> getter, setter을 사용하는 방법. html의 name과 같을 때 프로퍼티 사용해 가져옴
@@ -40,18 +111,18 @@ public class MemberController {
 //		String memPhone2 = request.getParameter("memPhone2");
 //		String memPhone3 = request.getParameter("memPhone3");
 		
-		service.memberRegister(member.getMemId(), member.getMemPw(), member.getMemMail(), member.getMemPhone1(), member.getMemPhone2(), member.getMemPhone3());
+//		service.memberRegister(member.getMemId(), member.getMemPw(), member.getMemMail(), member.getMemPhone1(), member.getMemPhone2(), member.getMemPhone3());
 		
 //		model.addAttribute("memId", memId);
 //		model.addAttribute("memPw", memPw);
 //		model.addAttribute("memMail", memMail);
 //		model.addAttribute("memPhone", memPhone1 + " - " + memPhone2 + " - " + memPhone3);
 		
-		return "memJoinOk";
-	}
+//		return "memJoinOk";
+//	}
 	
-	@RequestMapping(value="/memLogin", method=RequestMethod.POST)
-	public String memLogin(Model model, @RequestParam("memId") String memId, @RequestParam("memPw") String memPw) {
+//	@RequestMapping(value="/memLogin", method=RequestMethod.POST)
+//	public String memLogin(Model model, @RequestParam("memId") String memId, @RequestParam("memPw") String memPw) {
 //		Model은 데이터를 view에 전달하는 역할
 //		HttpServletRequest request 대신 @RequestParam("memId") String memId(받을 데이터 타입 선언) 로 대체 가능
 //		위 방법으로 할 때 String memId = request.getParameter("memId"); 불필요
@@ -60,17 +131,17 @@ public class MemberController {
 //		String memId = request.getParameter("memId");
 //		String memPw = request.getParameter("memPw");
 		
-		Member member = service.memberSearch(memId, memPw);
-		
-		try {
-			model.addAttribute("memId", member.getMemId());
-			model.addAttribute("memPw", member.getMemPw());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		
-		return "memLoginOk";
-	}
+//		Member member = service.memberSearch(memId, memPw);
+//		
+//		try {
+//			model.addAttribute("memId", member.getMemId());
+//			model.addAttribute("memPw", member.getMemPw());
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		
+//		return "memLoginOk";
+//	}
 	
 }

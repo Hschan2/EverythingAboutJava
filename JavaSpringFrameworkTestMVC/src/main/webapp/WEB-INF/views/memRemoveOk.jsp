@@ -3,15 +3,16 @@
     pageEncoding="UTF-8"%>
 <html>
 <head>
-	<title>로그인 성공</title>
+	<title>회원 삭제</title>
 </head>
 <body>
-	<h1> 로그인 성공 </h1>
-	아이디 : ${member.memId}<br />
-	비밀번호 : ${member.memPw}}<br />
+	<h1> 회원 삭제 </h1>
+	
+	<!-- Controller에서 @ModelAttribute("mem")로 설정했기 때문에 -->
+	ID : ${mem.memId}<br />
 	
 	<P>  The time on the server is ${serverTime}. </P>
 	
-	<a href="/lec17/resources/html/index.html">홈</a>
+	<a href="/lec17/resources/html/index.html"> 홈 </a>
 </body>
 </html>

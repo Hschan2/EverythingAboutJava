@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원가입 화면</title>
+<title>회원 정보 수정</title>
 </head>
 <body>
-	<h1>회원가입</h1>
-	<form action="/lec17/memJoin" method="post">
+	<h1>회원 정보 수정</h1>
+	<form action="/lec17/memModify" method="post">
 		아이디 : <input type="text" name="memId" ><br />
 		비밀번호 : <input type="password" name="memPw" ><br />
 		이메일 : <input type="text" name="memMail" ><br />
@@ -22,13 +22,13 @@
 		성별 : <input type="radio" name="memGender" value="M">남자, 
 				 <input type="radio" name="memGender" value="W">여자<br />
 		좋아하는 스포츠 : <input type="checkbox" name="memFSports" value="soccer">축구, 
-				<input type="checkbox" name="memFSports" value="baseball">야구, 
-				<input type="checkbox" name="memFSports" value="basketball">농구,
+				<input type="checkbox" name="memFSports" value="baseball">농구, 
+				<input type="checkbox" name="memFSports" value="basketball">야구,
 				<input type="checkbox" name="memFSports" value="volleyball">발리볼,
 				<input type="checkbox" name="memFSports" value="billiards">빌보드 <br />
-		<input type="submit" value="가입" >
+		<input type="submit" value="수정" >
 		<input type="reset" value="취소" >
 	</form>
-	<a href="/lec17/resources/html/login.html">로그인</a> &nbsp;&nbsp; <a href="/lec17/resources/html/index.html">홈으로</a>
+	<a href="/lec17/resources/html/index.html">홈</a>
 </body>
 </html>

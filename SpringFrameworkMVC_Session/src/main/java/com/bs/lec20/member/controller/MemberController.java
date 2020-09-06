@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.ui.Model;
 
 import com.bs.lec20.member.Member;
 import com.bs.lec20.member.service.MemberService;
@@ -108,18 +109,32 @@ public class MemberController {
 	}
 	
 	// Modify
-	@RequestMapping(value = "/modifyForm", method = RequestMethod.GET)
-	public ModelAndView modifyForm(HttpServletRequest request) {
+//	@RequestMapping(value = "/modifyForm", method = RequestMethod.GET)
+//	public ModelAndView modifyForm(HttpServletRequest request) {
+//		
+//		HttpSession session = request.getSession();
+//		Member member = (Member) session.getAttribute("member");
+//		
+//		ModelAndView mav = new ModelAndView();
+//		mav.addObject("member", service.memberSearch(member));
+//		
+//		mav.setViewName("/member/modifyForm");
+//		
+//		return mav;
+//	}
+	@RequestMapping(value = "/modifyForm")
+	public String modifyForm(Model model, HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
 		Member member = (Member) session.getAttribute("member");
 		
-		ModelAndView mav = new ModelAndView();
-		mav.addObject("member", service.memberSearch(member));
+		if(null == member) { // member의 값이 없으면. 즉, 로그인이 되어 있지 않으면
+			return "redirect:/"; // redirect로 메인으로 가라
+		} else { // 값이 있으면. 즉, 로그인이 되어 있으면
+			model.addAttribute("member", service.memberSearch(member)); // memberSearch로 값을 넣어라
+		}
 		
-		mav.setViewName("/member/modifyForm");
-		
-		return mav;
+		return "/member/modifyForm"; // modifyForm으로 이동하라 (값이 있을 때)
 	}
 	
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)
@@ -145,8 +160,13 @@ public class MemberController {
 		
 		HttpSession session =  request.getSession();
 		Member member = (Member) session.getAttribute("member");
-		mav.addObject("member", member);
-		mav.setViewName("/member/removeForm");
+		
+		if(null == member) { // 로그인이 안되어 있을 경우
+			mav.setViewName("redirect:/"); // 메인으로
+		} else { // 로그인이 되어 있을 경우
+			mav.addObject("member", member); // mvc에 object 값을 넣고
+			mav.setViewName("/member/removeForm"); // 뷰를 removeForm으로 (삭제 페이지로 보여라)
+		} 
 		
 		return mav;
 	}
@@ -157,7 +177,7 @@ public class MemberController {
 		service.memberRemove(member);
 		
 		HttpSession session = request.getSession();
-		session.invalidate();
+		session.invalidate(); // 세션 종료. 즉 삭제
 		
 		return "/member/removeOk";
 	}

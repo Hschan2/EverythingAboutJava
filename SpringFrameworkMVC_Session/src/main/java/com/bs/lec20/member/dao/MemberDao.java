@@ -70,6 +70,34 @@ public class MemberDao implements IMemberDao {
 		final String sql = "INSERT INTO member (memId, memPw, memMail) values (?, ?, ?)";
 		result = template.update(sql, member.getMemId(), member.getMemPw(), member.getMemMail());
 		
+//		다른 방법 2
+//		result = template.update(new PreparedStatementCreator() {
+//		
+//		@Override
+//		public PreparedStatement createPreparedStatement(Connection conn)
+//				throws SQLException {
+//			PreparedStatement pstmt = conn.prepareStatement(sql);
+//			pstmt.setString(1, member.getMemId());
+//			pstmt.setString(2, member.getMemPw());
+//			pstmt.setString(3, member.getMemMail());
+//			
+//			return pstmt;
+//		}
+//	});
+		
+//		다른 방법 3
+//		result = template.update(sql, new PreparedStatementSetter() {
+//			
+//			@Override
+//			public void setValues(PreparedStatement pstmt) throws SQLException {
+//				pstmt.setString(1, member.getMemId());
+//				pstmt.setString(2, member.getMemPw());
+//				pstmt.setString(3, member.getMemMail());
+//				
+//			}
+//		});
+		
+		
 //		templete 사용 전
 		
 //		try { // DB 연결할 때는 무조건 try catch문!
@@ -136,6 +164,60 @@ public class MemberDao implements IMemberDao {
 			
 		});
 		
+//		다른 방법 1
+//		members = template.query(new PreparedStatementCreator() {
+//		
+//			@Override
+//			public PreparedStatement createPreparedStatement(Connection conn)
+//				throws SQLException {
+//				PreparedStatement pstmt = conn.prepareStatement(sql);
+//				pstmt.setString(1, member.getMemId());
+//				pstmt.setString(2, member.getMemPw());
+//				return pstmt;
+//			}
+//		}, new RowMapper<Member>() {
+//
+//			@Override
+//			public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
+//				Member mem = new Member();
+//				mem.setMemId(rs.getString("memId"));
+//				mem.setMemPw(rs.getString("memPw"));
+//				mem.setMemMail(rs.getString("memMail"));
+//				mem.setMemPurcNum(rs.getInt("memPurcNum"));
+//				return mem;
+//			}
+//		});
+	
+//		다른 방법 2
+//		members = template.query(sql, new RowMapper<Member>() {
+//
+//		@Override
+//		public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
+//			Member mem = new Member();
+//			mem.setMemId(rs.getString("memId"));
+//			mem.setMemPw(rs.getString("memPw"));
+//			mem.setMemMail(rs.getString("memMail"));
+//			mem.setMemPurcNum(rs.getInt("memPurcNum"));
+//			return mem;
+//		}
+//		
+//	}, member.getMemId(), member.getMemPw());
+	
+//		다른 방법 3
+//		members = template.query(sql, new Object[]{member.getMemId(), member.getMemPw()}, new RowMapper<Member>() {
+//
+//			@Override
+//			public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
+//				Member mem = new Member();
+//				mem.setMemId(rs.getString("memId"));
+//				mem.setMemPw(rs.getString("memPw"));
+//				mem.setMemMail(rs.getString("memMail"));
+//				mem.setMemPurcNum(rs.getInt("memPurcNum"));
+//				return mem;
+//			}
+//		
+//		});
+		
 		if(members.isEmpty()) return null; // members가 없으면 null 리턴
 		
 		return members.get(0);
@@ -197,6 +279,31 @@ public class MemberDao implements IMemberDao {
 		final String sql = "UPDATE member SET memPw = ? AND memMail = ? WHERE memId = ?";
 		result = template.update(sql, member.getMemPw(), member.getMemMail(), member.getMemId());
 		
+//		다른 방법 1
+//		result = template.update(new PreparedStatementCreator() {
+//			
+//			@Override
+//			public PreparedStatement createPreparedStatement(Connection conn)
+//					throws SQLException {
+//				PreparedStatement pstmt = conn.prepareStatement(sql);
+//				pstmt.setString(1, member.getMemPw());
+//				pstmt.setString(2, member.getMemMail());
+//				pstmt.setString(3, member.getMemId());
+//				
+//				return pstmt;
+//			}
+//		});
+		
+//		다른 방법 2
+//		result = template.update(sql, new PreparedStatementSetter() {
+//					
+//			@Override
+//			public void setValues(PreparedStatement pstmt) throws SQLException {
+//				pstmt.setString(1, member.getMemPw());
+//				pstmt.setString(2, member.getMemMail());
+//				pstmt.setString(3, member.getMemId());
+//			}
+//		});
 		
 //		templete 사용 전
 		
@@ -238,6 +345,30 @@ public class MemberDao implements IMemberDao {
 
 		final String sql = "DELETE member WHERE memId = ? AND memPw = ?";
 		result = template.update(sql, member.getMemId(), member.getMemPw());
+		
+//		다른 방법 1
+//		result = template.update(new PreparedStatementCreator() {
+//			
+//			@Override
+//			public PreparedStatement createPreparedStatement(Connection conn)
+//					throws SQLException {
+//				PreparedStatement pstmt = conn.prepareStatement(sql);
+//				pstmt.setString(1, member.getMemId());
+//				pstmt.setString(2, member.getMemPw());
+//				
+//				return pstmt;
+//			}
+//		});
+		
+//		다른 방법 2
+//		result = template.update(sql, new PreparedStatementSetter() {
+//					
+//			@Override
+//			public void setValues(PreparedStatement pstmt) throws SQLException {
+//				pstmt.setString(1, member.getMemId());
+//				pstmt.setString(2, member.getMemPw());
+//			}
+//		});
 		
 //		templete 사용 전
 		

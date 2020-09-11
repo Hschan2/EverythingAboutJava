@@ -10,28 +10,33 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.bs.lec20.member.Member;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.mchange.v2.c3p0.DriverManagerDataSource;
 
 @Repository
 public class MemberDao implements IMemberDao {
 	
 	// JDBC => 드라이버 로딩 - DB 연결 - SQL 작성 및 전송 - 자원해제
-	private String driver = "oracle.jdbc.driver.OracleDriver";
-	private String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-	private String userid = "hseongchan2";
-	private String userpw = "448744";
+//	private String driver = "oracle.jdbc.driver.OracleDriver";
+//	private String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+//	private String userid = "hseongchan2";
+//	private String userpw = "448744";
 	
 	// c3p0 version (Data Connection Pool 사용을 위해)
-	private DriverManagerDataSource dataSource;
+//	private DriverManagerDataSource dataSource; // For Templete
+//	private ComboPooledDataSource dataSource; // ConnectionPool
 	private JdbcTemplate template;
 	
-	// Spring ver
+	
+	
+	// Spring ver.
 	// private org.springframework.jdbc.datasource.DriverManagerDataSource dataSource;
 	
 //	private Connection conn = null;
@@ -40,23 +45,34 @@ public class MemberDao implements IMemberDao {
 	
 //	private HashMap<String, Member> dbMap;
 	
-	public MemberDao() {
+	// servlet-context에서 자동 주입
+	@Autowired
+	public MemberDao(ComboPooledDataSource dataSource) {
 //		dbMap = new HashMap<String, Member>();
-		dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClass(driver); // 드라이버 설정
-		dataSource.setJdbcUrl(url); // jdbc url 설정
-		dataSource.setUser(userid); // DB 아이디 설정
-		dataSource.setPassword(userpw); // DB 패스워드 설정
+//		dataSource = new DriverManagerDataSource();
+//		dataSource = new ComboPooledDataSource();
 		
-//		Spring ver
+		// ComboPooledDataSource를 사용할 때는 try catch 문 (예외 처리 필수)
+//		try {
+//			dataSource.setDriverClass(driver); // 드라이버 설정
+//			dataSource.setJdbcUrl(url); // jdbc url 설정
+//			dataSource.setUser(userid); // DB 아이디 설정
+//			dataSource.setPassword(userpw); // DB 패스워드 설정
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			e.printStackTrace();
+//		}
+//		
+//		Spring ver.
 //		dataSource = new org.springframework.jdbc.datasource.DriverManagerDataSource();
 //		dataSource.setDriverClassName(driver);
 //		dataSource.setUrl(url);
 //		dataSource.setUsername(userid);
 //		dataSource.setPassword(userpw);
 		
-		template = new JdbcTemplate();
-		template.setDataSource(dataSource);
+//		template = new JdbcTemplate();
+//		template.setDataSource(dataSource);
+		this.template = new JdbcTemplate(dataSource);
 	}
 	
 	// 가입
@@ -100,7 +116,7 @@ public class MemberDao implements IMemberDao {
 		
 //		templete 사용 전
 		
-//		try { // DB 연결할 때는 무조건 try catch문!
+//		try { // DB 연결할 때는 무조건 try catch문! (예외 처리 필수)
 //			Class.forName(driver); // Driver 로딩
 //			conn = DriverManager.getConnection(url, userid, userpw); // DB 연결
 //			String sql = "INSERT INTO member (memId, memPw, memMail) values (?, ?, ?)"; // DB 데이터 삽입 쿼리

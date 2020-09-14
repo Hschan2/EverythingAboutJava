@@ -28,8 +28,8 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="submit" value="Join" >
-					<input type="reset" value="Cancel" >
+					<input type="submit" value="가입" >
+					<input type="reset" value="취소" >
 				</td>
 			</tr>
 		</table>

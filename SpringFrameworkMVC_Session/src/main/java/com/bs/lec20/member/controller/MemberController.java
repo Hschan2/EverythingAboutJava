@@ -19,7 +19,7 @@ import com.bs.lec20.member.Member;
 import com.bs.lec20.member.service.MemberService;
 
 @Controller
-@RequestMapping("/member")
+// @RequestMapping("/member")
 public class MemberController {
 	// method = RequestMethod.GET => 해당 페이지로 이동했을 때
 	// method = RequestMethod.POST => form의 페이지에서 submit 했을 때
@@ -42,12 +42,12 @@ public class MemberController {
 	}
 	
 	// 회원가입
-	@RequestMapping("/joinForm")
+	@RequestMapping("/member/joinForm")
 	public String joinForm(Member member) {
 		return "/member/joinForm";
 	}
 	
-	@RequestMapping(value = "/join", method = RequestMethod.POST)
+	@RequestMapping(value = "/member/join", method = RequestMethod.POST)
 	public String joinReg(Member member) {
 		
 		service.memberRegister(member);
@@ -56,7 +56,7 @@ public class MemberController {
 	}
 	
 	// 로그인
-	@RequestMapping("/loginForm")
+	@RequestMapping("/member/loginForm")
 	public String loginForm(Member member) {
 		return "/member/loginForm";
 	}
@@ -76,7 +76,7 @@ public class MemberController {
 	*/
 	
 	// 세션을 이용한 두 번째 방법. 첫 번째 방법보다 한 단계정도 간단. 스프링에서 자주 사용
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/member/login", method = RequestMethod.POST)
 	public String memLogin(Member member, HttpSession session) {
 		
 		Member mem = service.memberSearch(member);
@@ -100,7 +100,7 @@ public class MemberController {
 	*/
 	
 	// Logout 두 번째 방법
-	@RequestMapping("/logout")
+	@RequestMapping("/member/logout")
 	public String memLogout(Member member, HttpSession session) {
 		
 		session.invalidate(); // 세션 삭제. 유효성을 없애겠다
@@ -122,7 +122,7 @@ public class MemberController {
 //		
 //		return mav;
 //	}
-	@RequestMapping(value = "/modifyForm")
+	@RequestMapping(value = "/member/modifyForm")
 	public String modifyForm(Model model, HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
@@ -137,7 +137,7 @@ public class MemberController {
 		return "/member/modifyForm"; // modifyForm으로 이동하라 (값이 있을 때)
 	}
 	
-	@RequestMapping(value = "/modify", method = RequestMethod.POST)
+	@RequestMapping(value = "/member/modify", method = RequestMethod.POST)
 	public ModelAndView modify(Member member, HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
@@ -153,7 +153,7 @@ public class MemberController {
 	}
 	
 	// Remove
-	@RequestMapping("/removeForm")
+	@RequestMapping("/member/removeForm")
 	public ModelAndView removeForm(HttpServletRequest request) {
 		
 		ModelAndView mav = new ModelAndView();
@@ -171,7 +171,7 @@ public class MemberController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/remove", method = RequestMethod.POST)
+	@RequestMapping(value = "/member/remove", method = RequestMethod.POST)
 	public String memRemove(Member member, HttpServletRequest request) {
 		
 		service.memberRemove(member);

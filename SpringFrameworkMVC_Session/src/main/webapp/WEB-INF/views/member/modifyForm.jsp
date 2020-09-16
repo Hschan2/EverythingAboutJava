@@ -29,7 +29,8 @@
 				<td><form:input path="memMail" value="${member.memMail}" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Modify" ></td>
+				<td colspan="2"><input type="submit" value="수정" ></td>
+				<td colspan="2"><input type="reset" value="취소" ></td>
 			</tr>
 		</table>
 	</form:form>

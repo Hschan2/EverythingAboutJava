@@ -23,7 +23,7 @@
 				<td><form:password path="memPw" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Login" ></td>
+				<td colspan="2"><input type="submit" value="로그인" ></td>
 			</tr>
 		</table>
 	</form:form>

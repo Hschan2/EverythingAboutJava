@@ -1,6 +1,6 @@
 package com.bs.lec20.member.dao;
 
-import java.awt.List;
+import java.util.List;
 import java.io.Console;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -151,10 +151,10 @@ public class MemberDao implements IMemberDao {
 	public Member memberSelect(Member member) {
 		
 		// templete 사용 시
-		java.util.List<Member> members = null;
+		List<Member> members = null;
 		
 		// final => 다른 곳에서 변경되는 경우는 방지하기 위해
-		final String sql = "SELECT * FROM member WHERE memId = ? and memPw = ?";
+		final String sql = "SELECT * FROM member WHERE memId = ? AND memPw = ?";
 		
 		members = template.query(sql, new PreparedStatementSetter() {
 			
@@ -172,7 +172,7 @@ public class MemberDao implements IMemberDao {
 				Member mem = new Member();
 				mem.setMemId(rs.getString("memId"));
 				mem.setMemPw(rs.getString("memPw"));
-				mem.setMemMail(rs.getString("mMailId"));
+				mem.setMemMail(rs.getString("memMail"));
 				mem.setMemPurcNum(rs.getInt("memPurcNum"));
 				
 				return mem;

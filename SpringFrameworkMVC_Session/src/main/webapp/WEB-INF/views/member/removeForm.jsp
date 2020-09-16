@@ -24,7 +24,8 @@
 				<td><form:password path="memPw" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Remove" ></td>
+				<td colspan="2"><input type="submit" value="삭제" ></td>
+				<td colspan="2"><input type="reset" value="취소" ></td>
 			</tr>
 		</table>
 	</form:form>

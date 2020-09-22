@@ -17,12 +17,18 @@ public class MemberService implements IMemberService {
 	MemberDao dao;
 	
 	@Override
-	public void memberRegister(Member member) {
+	public int memberRegister(Member member) {
 //		printMembers(dao.memberInsert(member));
 		int result = dao.memberInsert(member);
 		
-		if(result == 0) System.out.println("가입 실패");
-		else System.out.println("가입 성공");
+		if(result == 0) {
+			System.out.println("가입 실패");
+			return 0;
+		}
+		else {
+			System.out.println("가입 성공");
+			return 1;
+		}
 	}
 
 	@Override
@@ -30,10 +36,14 @@ public class MemberService implements IMemberService {
 		
 		Member mem = dao.memberSelect(member);
 		
-		if(mem == null) System.out.println("로그인 실패");
-		else System.out.println("로그인 성공");
-		
-		return mem;
+		if(mem == null) {
+			System.out.println("로그인 실패");
+			return null;
+		}
+		else {
+			System.out.println("로그인 성공");
+			return mem;
+		}
 	}
 
 	@Override

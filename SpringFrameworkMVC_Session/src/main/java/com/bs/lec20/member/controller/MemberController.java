@@ -50,9 +50,13 @@ public class MemberController {
 	@RequestMapping(value = "/member/join", method = RequestMethod.POST)
 	public String joinReg(Member member) {
 		
-		service.memberRegister(member);
+		int result = service.memberRegister(member);
 		
-		return "/member/joinOk";
+		if(result == 0) {
+			return "redirect:/";
+		} else {
+			return "/member/joinOk";
+		}
 	}
 	
 	// 로그인
@@ -81,10 +85,13 @@ public class MemberController {
 		
 		Member mem = service.memberSearch(member);
 		
-		// getSession()이 필요 없이 바로 session을 set 하면 된다
-		session.setAttribute("member", mem);
-		
-		return "/member/loginOk";
+		if(mem == null) {
+			return "redirect:/";
+		} else {
+			// getSession()이 필요 없이 바로 session을 set 하면 된다
+			session.setAttribute("member", mem);
+			return "/member/loginOk";
+		}
 	}
 	
 	// Logout 첫 번째 방법

@@ -86,7 +86,7 @@ public class MemberController {
 		Member mem = service.memberSearch(member);
 		
 		if(mem == null) {
-			return "redirect:/";
+			return "redirect:/member/loginForm";
 		} else {
 			// getSession()이 필요 없이 바로 session을 set 하면 된다
 			session.setAttribute("member", mem);

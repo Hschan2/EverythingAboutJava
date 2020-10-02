@@ -8,8 +8,9 @@
 <body>
 	<h1>로그인 성공</h1>
 	
-	아이디 : ${member.memId}<br />
-	비밀번호 : ${member.memPw}<br />
+	아이디 : ${member.memId} <br />
+	비밀번호 : ${member.memPw} <br />
+	이메일 : ${member.memMail} <br />
 	
 	<P>  현재 시간은 ${serverTime}. </P>
 	

@@ -156,29 +156,29 @@ public class MemberDao implements IMemberDao {
 		// final => 다른 곳에서 변경되는 경우는 방지하기 위해
 		final String sql = "SELECT * FROM member WHERE memId = ? AND memPw = ?";
 		
-		members = template.query(sql, new PreparedStatementSetter() {
-			
-			@Override
-			public void setValues(PreparedStatement pstmt) throws SQLException {
-				// TODO Auto-generated method stub
-				pstmt.setString(1, member.getMemId());
-				pstmt.setString(2, member.getMemPw());
-			}
-		}, new RowMapper<Member>() {
-
-			@Override
-			public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
-				// TODO Auto-generated method stub
-				Member mem = new Member();
-				mem.setMemId(rs.getString("memId"));
-				mem.setMemPw(rs.getString("memPw"));
-				mem.setMemMail(rs.getString("memMail"));
-				mem.setMemPurcNum(rs.getInt("memPurcNum"));
-				
-				return mem;
-			}
-			
-		});
+//		members = template.query(sql, new PreparedStatementSetter() {
+//			
+//			@Override
+//			public void setValues(PreparedStatement pstmt) throws SQLException {
+//				// TODO Auto-generated method stub
+//				pstmt.setString(1, member.getMemId());
+//				pstmt.setString(2, member.getMemPw());
+//			}
+//		}, new RowMapper<Member>() {
+//
+//			@Override
+//			public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
+//				// TODO Auto-generated method stub
+//				Member mem = new Member();
+//				mem.setMemId(rs.getString("memId"));
+//				mem.setMemPw(rs.getString("memPw"));
+//				mem.setMemMail(rs.getString("memMail"));
+//				mem.setMemPurcNum(rs.getInt("memPurcNum"));
+//				
+//				return mem;
+//			}
+//			
+//		});
 		
 //		다른 방법 1
 //		members = template.query(new PreparedStatementCreator() {
@@ -220,19 +220,19 @@ public class MemberDao implements IMemberDao {
 //	}, member.getMemId(), member.getMemPw());
 	
 //		다른 방법 3
-//		members = template.query(sql, new Object[]{member.getMemId(), member.getMemPw()}, new RowMapper<Member>() {
-//
-//			@Override
-//			public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
-//				Member mem = new Member();
-//				mem.setMemId(rs.getString("memId"));
-//				mem.setMemPw(rs.getString("memPw"));
-//				mem.setMemMail(rs.getString("memMail"));
-//				mem.setMemPurcNum(rs.getInt("memPurcNum"));
-//				return mem;
-//			}
-//		
-//		});
+		members = template.query(sql, new Object[]{member.getMemId(), member.getMemPw()}, new RowMapper<Member>() {
+
+			@Override
+			public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
+				Member mem = new Member();
+				mem.setMemId(rs.getString("memId"));
+				mem.setMemPw(rs.getString("memPw"));
+				mem.setMemMail(rs.getString("memMail"));
+				mem.setMemPurcNum(rs.getInt("memPurcNum"));
+				return mem;
+			}
+		
+		});
 		
 		if(members.isEmpty()) return null; // members가 없으면 null 리턴
 		

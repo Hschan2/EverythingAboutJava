@@ -151,7 +151,6 @@ public class MemberDao implements IMemberDao {
 	public Member memberSelect(Member member) {
 		
 		// templete 사용 시
-		List<Member> members = null;
 		
 		// final => 다른 곳에서 변경되는 경우는 방지하기 위해
 		final String sql = "SELECT * FROM member WHERE memId = ? AND memPw = ?";
@@ -220,7 +219,7 @@ public class MemberDao implements IMemberDao {
 //	}, member.getMemId(), member.getMemPw());
 	
 //		다른 방법 3
-		members = template.query(sql, new Object[]{member.getMemId(), member.getMemPw()}, new RowMapper<Member>() {
+		List<Member> members = template.query(sql, new Object[]{member.getMemId(), member.getMemPw()}, new RowMapper<Member>() {
 
 			@Override
 			public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -229,13 +228,14 @@ public class MemberDao implements IMemberDao {
 				mem.setMemPw(rs.getString("memPw"));
 				mem.setMemMail(rs.getString("memMail"));
 				mem.setMemPurcNum(rs.getInt("memPurcNum"));
+
 				return mem;
 			}
 		
 		});
 		
 		if(members.isEmpty()) return null; // members가 없으면 null 리턴
-		
+
 		return members.get(0);
 		
 //		templete 사용 전

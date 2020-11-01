@@ -4,10 +4,10 @@ import com.bs.lec17.member.Member;
 
 public interface IMemberService {
 	
-	void memberRegister(Member member);
-	void memberSearch(Member member);
-	Member[] memberModify(Member member);
-	void memberRemove(Member member);
+	int memberRegister(Member member);
+	Member memberSearch(Member member);
+	Member memberModify(Member member);
+	int memberRemove(Member member);
 	
 //	** 이전 버전
 	

@@ -1,55 +1,107 @@
 package com.bs.lec17.member.dao;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementSetter;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import com.bs.lec17.member.Member;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 //@Component
 @Repository
 public class MemberDao implements IMemberDao {
 
-private HashMap<String, Member> dbMap;
+	private JdbcTemplate template;
 	
-	public MemberDao() {
-		dbMap = new HashMap<String, Member>();
+	@Autowired
+	public MemberDao(ComboPooledDataSource dataSource) {
+		this.template = new JdbcTemplate(dataSource);
 	}
 	
 	@Override
-	public Map<String, Member> memberInsert(Member member) {
+	public int memberInsert(Member member) {
 		
-		dbMap.put(member.getMemId(), member);
-		return dbMap;
+		int result = 0;
 		
+		final String sql = "INSERT INTO memjoin (memId, memPw, memMail, memPhones, memAge, memAdult, memGender, memFSports) values (?, ?, ?, ?, ?, ?, ?, ?)";
+		result = template.update(sql, member.getMemId(), member.getMemPw(), member.getMemMail(), member.getMemPhones(), member.getMemAge(), member.isMemAdult(), member.getMemGender(), member.getMemFSports());
+		
+		return result;
 	}
 
 	@Override
 	public Member memberSelect(Member member) {
 		
-		Member mem = dbMap.get(member.getMemId());
-		return mem;
+		List<Member> members = null;
 		
+		final String sql = "SELECT * FROM memjoin WHERE memId = ? AND memPw = ?";
+		
+		members = template.query(sql, new PreparedStatementSetter() {
+			
+			@Override
+			public void setValues(PreparedStatement pstmt) throws SQLException {
+				// TODO Auto-generated method stub
+				pstmt.setString(1, member.getMemId());
+				pstmt.setString(2, member.getMemPw());
+			}
+		}, new RowMapper<Member>() {
+
+			@Override
+			public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
+				// TODO Auto-generated method stub
+				Member mem = new Member();
+				mem.setMemId(rs.getString("memId"));
+				mem.setMemPw(rs.getString("memPw"));
+				mem.setMemMail(rs.getString("memMail"));
+				mem.setMemPhones(rs.getString("memPhones"));
+				mem.setMemAge(rs.getInt("memAge"));
+				mem.setMemAdult(rs.getBoolean("memAdult"));
+				mem.setMemGender(rs.getString("memGender"));
+				mem.setMemFSports(rs.getString("memFSports"));
+
+				return mem;
+			}
+			
+		});
+
+		if(members.isEmpty()) return null; // members가 없으면 null 리턴
+		
+		return members.get(0);
 	}
 
 	@Override
-	public Member memberUpdate(Member member) {
+	public int memberUpdate(Member member) {
 		
-		dbMap.put(member.getMemId(), member);
-		return dbMap.get(member.getMemId());
+		int result = 0;
+
+		final String sql = "UPDATE memjoin SET memPw = ? AND memMail = ? AND memPhones = ? AND memAge = ? AND memAdult = ? AND memGender = ? AND memFSports = ? WHERE memId = ?";
+		result = template.update(sql, member.getMemPw(), member.getMemMail(), member.getMemPhones(), member.getMemAge(), member.isMemAdult(), member.getMemGender(), member.getMemFSports(), member.getMemId());
 		
+		return result;
 	}
 
 	@Override
-	public Map<String, Member> memberDelete(Member member) {
+	public int memberDelete(Member member) {
 		
-		dbMap.remove(member.getMemId());
-		return dbMap;
+		int result = 0;
+
+		final String sql = "DELETE memjoin WHERE memId = ? AND memPw = ?";
+		result = template.update(sql, member.getMemId(), member.getMemPw());
 		
+		
+		return result;
 	}
 	
 //	** 이전 버전
@@ -92,23 +144,6 @@ private HashMap<String, Member> dbMap;
 //											   mem.getMemPhone3() + "\n");
 //		}
 //		
-//	}
-//
-//	@Override
-//	public Member memberSelect(String memId, String memPw) {
-//		Member member = dbMap.get(memId);
-//		
-//		return member;
-//	}
-//
-//	@Override
-//	public void memberUpdate() {
-//
-//	}
-//
-//	@Override
-//	public void memberDelete() {
-//
 //	}
 
 }

@@ -7,11 +7,11 @@ public class Member {
 	private String memId;
 	private String memPw;
 	private String memMail;
-	private List<MemPhone> memPhones;
+	private String memPhones;
 	private int memAge;
 	private boolean memAdult;
 	private String memGender;
-	private String[] memFSports;
+	private String memFSports;
 	
 	public String getMemId() {
 		return memId;
@@ -31,10 +31,10 @@ public class Member {
 	public void setMemMail(String memMail) {
 		this.memMail = memMail;
 	}
-	public List<MemPhone> getMemPhones() {
+	public String getMemPhones() {
 		return memPhones;
 	}
-	public void setMemPhones(List<MemPhone> memPhones) {
+	public void setMemPhones(String memPhones) {
 		this.memPhones = memPhones;
 	}
 	public int getMemAge() {
@@ -55,11 +55,11 @@ public class Member {
 	public void setMemGender(String memGender) {
 		this.memGender = memGender;
 	}
-	public String[] getMemFSports() {
+	public String getMemFSports() {
 		return memFSports;
 	}
-	public void setMemFSports(String[] memFSports) {
-		this.memFSports = memFSports;
+	public void setMemFSports(String string) {
+		this.memFSports = string;
 	}
 	
 //	** 이전버전

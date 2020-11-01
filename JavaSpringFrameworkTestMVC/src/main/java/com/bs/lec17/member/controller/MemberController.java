@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
@@ -26,6 +27,11 @@ public class MemberController {
 	@Autowired
 	MemberService service;
 	
+	@ModelAttribute("cp")
+	public String getContextPath(HttpServletRequest request) {
+		return request.getContextPath();
+	}
+	
 	@ModelAttribute("serverTime")
 	public String getServerTime(Locale locale) {
 		
@@ -38,24 +44,66 @@ public class MemberController {
 	@RequestMapping(value = "/memJoin", method = RequestMethod.POST)
 	public String memJoin(Member member) {
 		
-		service.memberRegister(member);
+		int result = service.memberRegister(member);
 		
-		return "memJoinOk";
+		if(result == 0) {
+			return "redirect:/";
+		} else {
+			return "memJoinOk";
+		}
 	}
 	
 	@RequestMapping(value = "/memLogin", method = RequestMethod.POST)
-	public String memLogin(Member member) {
+	public String memLogin(Member member, HttpSession session) {
 		
-		service.memberSearch(member);
+		Member mem = service.memberSearch(member);
+		
+		if(mem == null) {
+			return "redirect:/";
+		} else {
+			session.setAttribute("member", mem);
+			return "memLoginOk";
+		}
+	}
+	
+	@RequestMapping("logout")
+	public String memLogout(Member member, HttpSession session) {
+		
+		session.invalidate();
 		
 		return "memLoginOk";
 	}
 	
+	@RequestMapping("/removeForm")
+	public ModelAndView removeForm(HttpServletRequest request) {
+		
+		ModelAndView mav = new ModelAndView();
+		
+		HttpSession session =  request.getSession();
+		Member member = (Member) session.getAttribute("member");
+		
+		if(null == member) { // 로그인이 안되어 있을 경우
+			mav.setViewName("redirect:/"); // 메인으로
+		} else { // 로그인이 되어 있을 경우
+			mav.addObject("member", member); // mvc에 object 값을 넣고
+			mav.setViewName("memRemoveForm"); // 뷰를 removeForm으로 (삭제 페이지로 보여라)
+		} 
+		
+		return mav;
+	}
+	
 	@RequestMapping(value = "/memRemove", method = RequestMethod.POST)
-	public String memRemove(@ModelAttribute("mem") Member member) {
+	public String memRemove(Member member, HttpServletRequest request) {
 		
-		service.memberRemove(member);
+		int result = service.memberRemove(member);
 		
+		if(result == 0) {
+			return "redirect:/";
+		} else {
+			HttpSession session = request.getSession();
+			session.invalidate();
+		}
+
 		return "memRemoveOk";
 	}
 	
@@ -72,14 +120,30 @@ public class MemberController {
 	}
 	*/
 	
-	@RequestMapping(value = "/memModify", method = RequestMethod.POST)
-	public ModelAndView memModify(Member member) {
+	@RequestMapping(value = "modifyForm")
+	public String modifyForm(Model model, HttpServletRequest request) {
 		
-		Member[] members = service.memberModify(member);
+		HttpSession session = request.getSession();
+		Member member = (Member) session.getAttribute("member");
+		
+		if(null == member) { // member의 값이 없으면. 즉, 로그인이 되어 있지 않으면
+			return "redirect:/"; // redirect로 메인으로 가라
+		} else { // 값이 있으면. 즉, 로그인이 되어 있으면
+			model.addAttribute("member", service.memberSearch(member)); // memberSearch로 값을 넣어라
+			return "memModifyForm"; // modifyForm으로 이동하라 (값이 있을 때)
+		}
+	}
+	
+	@RequestMapping(value = "/memModify", method = RequestMethod.POST)
+	public ModelAndView memModify(Member member, HttpServletRequest request) {
+		
+		HttpSession session = request.getSession();
+		
+		Member members = service.memberModify(member);
+		session.setAttribute("member", members);
 		
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("memBef", members[0]);
-		mav.addObject("memAft", members[1]);
+		mav.addObject("memAft", members);
 		
 		mav.setViewName("memModifyOk");
 		

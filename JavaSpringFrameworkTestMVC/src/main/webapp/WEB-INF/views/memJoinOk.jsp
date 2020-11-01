@@ -10,8 +10,7 @@
 	아이디 : ${member.memId} <br />
 	비밀번호 : ${member.memPw} <br />
 	이메일 : ${member.memMail} <br />
-	핸드폰 1 : ${member.memPhones[0].memPhone1} - ${member.memPhones[0].memPhone2} - ${member.memPhones[0].memPhone3} <br />
-	핸드폰 2 : ${member.memPhones[1].memPhone1} - ${member.memPhones[1].memPhone2} - ${member.memPhones[1].memPhone3} <br />
+	핸드폰 : ${member.memPhones}<br />
 	나이 : ${member.memAge} <br />
 	성인 : ${member.memAdult} <br />
 	성별 : ${member.memGender} <br />
@@ -25,6 +24,6 @@
 	<!-- 핸드폰은 ${member.memPhone1}-${member.memPhone1}-${member.memPhone1}로 가져오면 된다 -->
 	<!-- Controller에서 @ModelAttribute("mem") Member member로 선언했을 경우 -->
 	
-	<a href="/lec17/resources/html/login.html">로그인</a>
+	<a href="${cp}/resources/html/login.html">로그인</a>
 </body>
 </html>

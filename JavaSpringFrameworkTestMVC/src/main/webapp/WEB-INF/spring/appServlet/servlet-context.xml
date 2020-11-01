@@ -25,4 +25,16 @@
 	
 	<!-- <beans:bean id="service" class="com.bs.lec17.member.service.MemberService"></beans:bean> -->
 	
+	<!-- Connection Pool -> 자동 주입을 위해 -->
+	<beans:bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<beans:property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />
+		<beans:property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl" />
+		<beans:property name="user" value="hseongchan2" />
+		<beans:property name="password" value="448744" />
+		<beans:property name="maxPoolSize" value="200" />
+		<beans:property name="checkoutTimeout" value="60000" />
+		<beans:property name="maxIdleTime" value="1800" />
+		<beans:property name="idleConnectionTestPeriod" value="600" />
+	</beans:bean>
+	
 </beans:beans>

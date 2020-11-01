@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입 화면</title>
+<script>
+</script>
 </head>
 <body>
 	<h1>회원가입</h1>
@@ -10,15 +12,10 @@
 		아이디 : <input type="text" name="memId" ><br />
 		비밀번호 : <input type="password" name="memPw" ><br />
 		이메일 : <input type="text" name="memMail" ><br />
-		핸드폰 1 : <input type="text" name="memPhones[0].memPhone1" size="5"> -
-				 <input type="text" name="memPhones[0].memPhone2" size="5"> -
-				 <input type="text" name="memPhones[0].memPhone3" size="5"><br />
-		핸드폰 2 : <input type="text" name="memPhones[1].memPhone1" size="5"> -
-				 <input type="text" name="memPhones[1].memPhone2" size="5"> -
-				 <input type="text" name="memPhones[1].memPhone3" size="5"><br />
+		핸드폰 : <input type="text" name="memPhones" size="20">
 		나이 : <input type="text" name="memAge" size="4" value="0"><br />
-		성인 : <input type="radio" name="memAdult" value="true">네, 
-				<input type="radio" name="memAdult" value="false">아니오 <br />
+		성인 : <input type="radio" name="memAdult" value="yes">네, 
+				<input type="radio" name="memAdult" value="no">아니오 <br />
 		성별 : <input type="radio" name="memGender" value="M">남자, 
 				 <input type="radio" name="memGender" value="W">여자<br />
 		좋아하는 스포츠 : <input type="checkbox" name="memFSports" value="soccer">축구, 
@@ -29,6 +26,6 @@
 		<input type="submit" value="가입" >
 		<input type="reset" value="취소" >
 	</form>
-	<a href="/lec17/resources/html/login.html">로그인</a> &nbsp;&nbsp; <a href="/lec17/resources/html/index.html">홈으로</a>
+	<a href="/lec17/resources/html/login.html">로그인</a> &nbsp;&nbsp; <a href="/lec17/">홈으로</a>
 </body>
 </html>

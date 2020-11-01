@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 
 import com.bs.lec17.member.Member;
 import com.bs.lec17.member.dao.MemberDao;
-import com.bs.lec17.member.MemPhone;
 
 @Service
 //@Service("memService")
@@ -27,62 +26,97 @@ public class MemberService implements IMemberService {
 	MemberDao dao;
 	
 	@Override
-	public void memberRegister(Member member) {
-		printMembers(dao.memberInsert(member));
+	public int memberRegister(Member member) {
+		
+		int result = dao.memberInsert(member);
+		
+		if(result == 0) {
+			System.out.println("가입 실패");
+			return 0;
+		}
+		else {
+			System.out.println("가입 성공");
+			return 1;
+		}
 	}
 
 	@Override
-	public void memberSearch(Member member) {
-		printMember(dao.memberSelect(member));
-	}
-
-	@Override
-	public Member[] memberModify(Member member) {
+	public Member memberSearch(Member member) {
 		
-		Member memBef = dao.memberSelect(member);
-		Member memAft = dao.memberUpdate(member);
-		printMember(memAft);
+		Member mem = dao.memberSelect(member);
 		
-		return new Member[]{memBef, memAft};
-	}
-
-	@Override
-	public void memberRemove(Member member) {
-		printMembers(dao.memberDelete(member));
-	}
-	
-	private void printMembers(Map<String, Member> map) {
-		
-		Set<String> keys = map.keySet();
-		Iterator<String> iterator = keys.iterator();
-		
-		while (iterator.hasNext()) {
-			String key = iterator.next();
-			Member mem = map.get(key);
-			printMember(mem);
+		if(mem == null) {
+			System.out.println("로그인 실패");
+		}
+		else {
+			System.out.println("로그인 성공");
 		}
 		
+		return mem;
 	}
-	
-	private void printMember(Member mem) {
+
+	@Override
+	public Member memberModify(Member member) {
 		
-		System.out.print("ID:" + mem.getMemId() + "\t");
-		System.out.print("|PW:" + mem.getMemPw() + "\t");
-		System.out.print("|MAIL:" + mem.getMemMail() + "\t");
+		int result = dao.memberUpdate(member);
 		
-		List<MemPhone> memPhones = mem.getMemPhones();
-		for(MemPhone memPhone : memPhones) {
-			System.out.print("|PHONE:" + memPhone.getMemPhone1() + " - " + 
-											   memPhone.getMemPhone2() + " - " + 
-											   memPhone.getMemPhone3() + "\t");
+		if(result == 0) {
+			System.out.println("정보 수정 실패");
+			return null;
+		} else {
+			System.out.println("정보 수정 성공");
 		}
 		
-		System.out.print("|AGE:" + mem.getMemAge() + "\t");
-		System.out.print("|ADULT:" + mem.isMemAdult() + "\t");
-		System.out.print("|GENDER:" + mem.getMemGender() + "\t");
-		System.out.print("|FAVORITE SPORTS:" + Arrays.toString(mem.getMemFSports()) + "\n");
-		
+		return member;
 	}
+
+	@Override
+	public int memberRemove(Member member) {
+
+		int result = dao.memberDelete(member);
+		
+		if(result == 0) {
+			System.out.println("회원 탈퇴 실패"); 
+		}
+		else {
+			System.out.println("회원 탈퇴 성공"); // result == 1
+		}
+		
+		return result;
+	}
+	
+//	private void printMembers(Map<String, Member> map) {
+//		
+//		Set<String> keys = map.keySet();
+//		Iterator<String> iterator = keys.iterator();
+//		
+//		while (iterator.hasNext()) {
+//			String key = iterator.next();
+//			Member mem = map.get(key);
+//			printMember(mem);
+//		}
+//		
+//	}
+	
+//	private void printMember(Member mem) {
+//		
+//		System.out.print("ID:" + mem.getMemId() + "\t");
+//		System.out.print("|PW:" + mem.getMemPw() + "\t");
+//		System.out.print("|MAIL:" + mem.getMemMail() + "\t");
+//		
+//		List<MemPhone> memPhones = mem.getMemPhones();
+//		for(MemPhone memPhone : memPhones) {
+//			System.out.print("|PHONE:" + memPhone.getMemPhone1() + " - " + 
+//											   memPhone.getMemPhone2() + " - " + 
+//											   memPhone.getMemPhone3() + "\t");
+//		}
+//		
+//		System.out.print("|AGE:" + mem.getMemAge() + "\t");
+//		System.out.print("|ADULT:" + mem.isMemAdult() + "\t");
+//		System.out.print("|GENDER:" + mem.getMemGender() + "\t");
+//		System.out.print("|FAVORITE SPORTS:" + Arrays.toString(mem.getMemFSports()) + "\n");
+//		
+//	}
 	
 //	** 이전 버전
 	

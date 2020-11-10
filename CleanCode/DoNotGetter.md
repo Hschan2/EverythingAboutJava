@@ -135,13 +135,15 @@ public class Cars {
 Getter를 무조건 사용하지 않고 기능을 구현하기는 힘들 수 있다. 출력을 위한 값처럼 순수 값 프로퍼티를 가져오려면 어느 정도 getter를 사용해도 된다. 그러나 Collection 인터페이스를 사용하는 경우에는 외부에서 getter 메서드로 얻은 값을 통해 상태 값을 변경할 수 있다.<br>
 
 ```
+비추천하는 방법
 public List<Car> getCars() {
 		return cars;
-	} (x)
+	}
 
+추천하는 방법
 public List<Car> getCars() {
 		return Collections.unmodifiableList(cars);
-	} (o)
+	}
 ```
 unmodifiableList는 외부에서 값을 변경하지 못하도록 하는 기능이다. 이처럼 Collections.unmodifiableList()처럼 Unmodifiable Collecion을 사용해서 외부에서 변경하지 못하도록 하는 것이 좋다.<br>
 

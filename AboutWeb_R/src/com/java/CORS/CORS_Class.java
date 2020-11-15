@@ -1,5 +1,7 @@
 package com.java.CORS;
 
+import javax.swing.text.AbstractDocument.Content;
+
 public class CORS_Class {
 
 	public static void main(String[] args) {
@@ -65,5 +67,45 @@ public class CORS_Class {
 //		원하는 출처 자원만 받는 정책
 //		Server Side - 프론트 개발자를 위해 응답 헤더에 옳바른 Access-Controll-Allow-Origin이 내려올 수 있도록 세팅해야 함
 //		Client Side - Webpack Dev Server로 리버스 프록싱하여 우회 가능하게 하지만 Dev Server인 것 처럼 로컬 환경에서만 가능 => 가장 좋은 방법은 서버 개발자에 도움 요청
+	
+//		추가 정보 (CORS이 나오게 된 배경)
+//		웹 사이트에서 서버에 요청하고 응답을 받는 것은 모두 같은 도메인에서 발생하였다. -> 같은 도메인이 아니면 요청 자체를 막는 상황 발생
+//		-> 웹 발전이  이루어졌고 애플리케이션을 만드는 정도로 올라갔다
+//		
+//		만약 API를 사용하여 새로운 정보를 넣으려고 할 때 
+//		1. API를 웹 서버에 요청하고 응답을 받는 방식으로 이용. (브라우저에 요청하면 같은 도메인을 사용하고 있지 않기 때문에 문제가 발생)
+//		
+//		발생한 문제를 해결하기 위해 우회적으로 사용하는 방법으로 JSONP를 사용 (서버에서 데이터 반환하는 용도로 사용)
+//		예.
+//		```
+//		const script = document.createElement('script');
+//		script.src = '//some-domain.com/some-route/?cb=dosomething';
+//		
+//		document
+//			.querySelector('head')
+//			.apependChild(script);
+//		
+//		function dosomething(content) {
+//			// do something
+//		}
+//		
+//		dosomething({... Content ...});
+//		```
+//		
+//		우회적인 방법이기 때문에 보안에 위협이 될 수 있어서 브라우저에서 방지
+//		
+//		그래서 공식적인 방법을 사용해서 써라 => CORS 등장
+//		
+//		API Server (domain-a.com) <-> Clinet (domain-bbq.com)
+//		프론트 헤드에 request header에 CORS 관련 옵션을 넣어 보내고 서버에 response header에 해당 프론트 정보를 허용한다는 옵션을 넣어 사용한다.
+//		
+//		Client <-> Server
+//		1. Option을 담아서 서버에 요청
+//		2. Allowed from server 서버에서 허용
+//		3. GET or POST
+//		4. Response
+//		
+//		* 특정 도메인만 허용해서 요청을 받고 응답할 수 있음
+		
 	}
 }

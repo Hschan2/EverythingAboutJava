@@ -7,6 +7,7 @@ public class AOPClass {
 
 //		AOP는?
 //		Aspect Oriented Programming (관점 지향 프로그래밍)
+//		흩어진 코드를 한 곳으로 모은다
 //		어떠한 로직을 기준으로 핵심적인 관점 그리고 부가적인 관점으로 나누어 보고 그 관점을 기준으로 각각 모듈화(어떤 공통된 로직 혹은 기능을 하나의 단위로 묶는 것)한다
 //		
 //		인프라 로직은
@@ -65,6 +66,63 @@ public class AOPClass {
 //		Join point	메서드 레벨만 지원								생성자, 필드, 메서드 등 다양하게 지원
 //		Weaving		런타임 시에만 가능								런타임은 제공X, Compile-time, Post-compile, Load-time 제공
 //		대상			Spring Container가 관리하는 Bean에서만 가능		모든 java Object에서 가능
+	
+//		예시
+//		
+//		흩어진 AAAA와 BBBB
+//		class A {
+//			method a() {
+//				AAAA -> AAA로 바꿔야 할 시 모든 AAAA를 찾아서 바꿔야 함(다른 클래스에 있는 것도) => 문제 발생
+//				안녕하세요
+//				BBBB
+//			}
+//			
+//			method b() {
+//				AAAA
+//				반갑습니다
+//				BBBB
+//			}
+//		}
+//		
+//		class B {
+//			method c() {
+//				AAAA
+//				겨울입니다
+//				BBBB
+//			}
+//		}
+//		
+//		모아 놓은 AAAA와 BBBB
+//		class A {
+//			method a() {
+//				안녕하세요
+//			}
+//			
+//			method b() {
+//				반갑습니다
+//			}
+//		}
+//		
+//		class B {
+//			method c() {
+//				겨울입니다
+//			}
+//		}
+//		
+//		흩어진 AAAA와 BBBB에서 발생한 문제를 해결하기 위해 공통적으로 사용하는 AAAA와 BBBB를 하나로 모아서 사용하는 방법 => AOP
+//		class AAAABBBB {
+//			method aaaabbbb(JoinPoint point) {
+//				AAAA
+//				point.execute()
+//				BBBB
+//			}
+//		}
+//		
+//		AOP 구현 방법
+//		1. 컴파일 (A.java ---(AOP)---> A.class)
+//		2. 바이트코드 조작 (A.java -> A.class => class를 클래스 로더가 읽어올 때 메모리 상에 필요한 기능 넣어서 조작 (Aspect J가 제공))
+//		3. 프록시 패턴 (Spring AOP가 사용하는 방법)
+		
 	}
 
 }

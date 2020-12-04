@@ -1,5 +1,8 @@
 package com.java.AOP;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.RetentionPolicy;
+
 public class AOPClass {
 
 	public static void main(String[] args) {
@@ -128,7 +131,16 @@ public class AOPClass {
 //		자동으로 이루어진다고 생각하면 좋다.
 //		Class 내에 @Transactional 어노테이션이 붙으면 프록시가 새로 만들어진다.
 		
-		
+//		AOP 활용 방법
+//			Annotation을 사용해서 AOP 활용하기
+//				@LogExecutionTime이라는 Annotation은 어디에 적용할지 표시 해두는 용도
+//					- @interface를 생성하여 Annotation을 만들겠다.
+//						=> @Target(ElementType.METHOD)를 써서 메서드에 사용하겠다
+//						=> Retention(RetentionPolicy.RUNTIME)를 써서 Annotation 정보를 런타임 때까지 유지하겠다
+//						
+//				실제 Aspect (@LogExecutionTime Annotation이 달린 곳에 적용)
+//					@Around Annotation이 붙은 메서드는 @LogExecutionTime 붙은 다른 메서드를 불러올 수 있다
+					
 	}
 
 }

@@ -6,21 +6,22 @@
 1. JAVA 객체
 1. JAVA 상속 및 클래스
 1. JAVA 마무리
+---
 
-- Encapsulation
+- <b>Encapsulation</b>
 ```
 캡슐화(데이터 은닉)이란?
 캡슐화(데이터 은닉)을 왜 사용해야 하는가?
 ```
 
-- TDDproject
+- <b>TDDproject</b>
 ```
 TDD(Test Driven Development, 테스트 주도 개발)이란? 
 TDD(Test Driven Development, 테스트 주도 개발)를 왜 사용해야 하는가?
 TDD(Test Driven Development, 테스트 주도 개발)의 장·단점은?
 ```
 
-- CleanCode
+- <b>CleanCode</b>
 ```
 TDD와 CleanCode로 깨끗한 코드를 작성하는 방법
 
@@ -35,7 +36,7 @@ Comparable
 Java에서 Comparable이란?
 ```
 
-- AboutWeb_R
+- <b>AboutWeb_R</b>
 ```
 Web에서 요청과 응답
 
@@ -56,12 +57,12 @@ JPA이란?
 JPA를 왜 사용해야 하는가?
 ```
 
-- Servlet vs Spring
+- <b>Servlet vs Spring</b>
 ```
 Servlet과 Spring의 차이 (복습 필수)
 ```
 
-- JavaSpringFrameworkTest
+- <b>JavaSpringFrameworkTest</b>
 ```
 SpringFramework이란?
 
@@ -79,12 +80,12 @@ Spring Container (스프링 컨테이너) [Bean Container]의 LifeCycle
 스프링 컨테이너(Bean 컨테이너)의 LifeCycle (라이프 사이클)이란?
 ```
 
-- JavaSpringFrameworkTestMVC
+- <b>JavaSpringFrameworkTestMVC</b>
 ```
 자바 스프링 프레임워크(renew ver.) - 신입 프로그래머를 위한 강좌
 ```
 
-- SpringFrameworkMVC_Session
+- <b>SpringFrameworkMVC_Session</b>
 ```
 자바 스프링 프레임워크에서 세션이란?
 세션 사용 방법
@@ -94,7 +95,7 @@ Spring Container (스프링 컨테이너) [Bean Container]의 LifeCycle
 + JDBC ConnectPool
 ```
 
-- SpringFrameworkMVC_Cookie
+- <b>SpringFrameworkMVC_Cookie</b>
 ```
 자바 스프링 프레임워크에서 쿠키란?
 쿠키 사용 방법

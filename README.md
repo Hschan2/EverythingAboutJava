@@ -8,12 +8,14 @@
 1. JAVA 마무리
 
 - Encapsulation
+
 '''
 캡슐화(데이터 은닉)이란?
 캡슐화(데이터 은닉)을 왜 사용해야 하는가?
 '''
 
 - TDDproject
+
 '''
 TDD(Test Driven Development, 테스트 주도 개발)이란? 
 TDD(Test Driven Development, 테스트 주도 개발)를 왜 사용해야 하는가?

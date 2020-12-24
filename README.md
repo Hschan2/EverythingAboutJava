@@ -1,78 +1,116 @@
-## 자바에 대한 모든 것<br>
+# 자바에 대한 모든 것
 
-### Inflearn
+## Inflearn
+
 인프런에서 자바 기본을 다시 학습해보자
-- JAVA 객체
-- JAVA 상속 및 클래스
-- JAVA 마무리
+1. JAVA 객체
+1. JAVA 상속 및 클래스
+1. JAVA 마무리
+---
 
-### Encapsulation
-캡슐화(데이터 은닉)이란 무엇이며 왜 사용해야 하는지 알아보자
+- <b>Encapsulation</b>
+```
+캡슐화(데이터 은닉)이란?
+캡슐화(데이터 은닉)을 왜 사용해야 하는가?
+```
 
-### TDDproject
-TDD(Test Driven Development, 테스트 주도 개발)은 무엇이며 왜 사용해야 하는지 그리고 장 단점은 무엇인지 알아보자
+- <b>TDDproject</b>
+```
+TDD(Test Driven Development, 테스트 주도 개발)이란? 
+TDD(Test Driven Development, 테스트 주도 개발)를 왜 사용해야 하는가?
+TDD(Test Driven Development, 테스트 주도 개발)의 장·단점은?
+```
 
-### Calustor
-Java로 간단한 계산기 만들기를 해보자
+- <b>CleanCode</b>
+```
+TDD와 CleanCode로 깨끗한 코드를 작성하는 방법
 
-### CleanCode
-TDD와 CleanCode로 깨끗한 코드를 작성하는 방법을 배워보자
+StrategyPattern
+StrategyPattern(전략 패턴)이란?
 
-- StrategyPattern <br/>
-StrategyPattern(전략 패턴)은 무엇인지 배워보자
+Final, Static
+Java에서 Final은 무엇이며 왜 사용하는가?
+static과 자주 사용하는 이유는 무엇인가?
 
-- Final, Static <br/>
-Java에서 Final은 무엇이며 왜 사용할까? 그리고 static과 자주 사용하는 이유는 무엇인지 배워보자
+Comparable
+Java에서 Comparable이란?
 
-- Comparable <br/>
-Comparable이 무엇인지 배워보자
+Getter를 사용하는 대신 객체에 메시지를 보내는 것
 
-### AboutWeb_R
-웹에서의 요청과 응답에 대해 배워보자
+하드코딩을 멀리하는 것
+좋지 않은 습관은 하드코딩
 
-- 빌드와 배포 <br/>
-빌드왜 배포에 대해 배워보자
+좋은 자바 메서드 네이밍 짓기
 
-- JDBC, SQLMapper, ORM <br/>
-JDBC, SQLMapper, ORM에 대해 배워보자 (어렵다. 다시 복습할 필요가 있다.)
+하나의 메서드는 하나의 기능을 수행하기
 
-- 상속과 인터페이스 <br/>
-프로그래밍 교육 서비스 생활코딩에서 상속과 인터페이스 그리고 예외에 대해 배워보자
+null 반환보다는 Optional을 활용하는 방법
 
-- Spring, SpringBoot <br/>
-Spring이 무엇일까? 그리고 SpringBoot (스프링부트)는 무엇인가 배워보자
+JAVA 변수명 네이밍 규칙
+읽기 좋은 코드 만들기
+```
 
-- JPA <br/>
-JPA는 무엇일까? 그리고 왜 사용해야 하는지 배워보자
+- <b>AboutWeb_R</b>
+```
+Web에서 요청과 응답
 
-### Servlet vs Spring
-Servlet과 Spring의 차이를 배워보자
-- 다시 공부할 필요가 있다.
+빌드와 배포 (Build, Deploy)
 
-### JavaSpringFrameworkTest
-인프런에서 SpringFramework에 대해 배워보자
+JDBC, SQLMapper, ORM
+JDBC, SQLMapper, ORM이란? (복습 필수)
 
-- DI, XML <br/>
-DI 타입별로 사용하는 방법과 XML 기능별로 나누는 학습을 해보자
+상속과 인터페이스
+상속과 인터페이스, 예외란?
 
-- @Autowired, @resource <br/>
-@Autowired과 @resource의 어노테이션 사용에 대해 배워보자
+Spring, SpringBoot
+Spring이 무엇일까?
+SpringBoot(스프링부트)이란?
 
-- Qualifier, Injection <br/>
-Qualifier와 Injection을 사용하는 이유와 방법에 대해 배워보자
+JPA
+JPA이란? 
+JPA를 왜 사용해야 하는가?
+```
 
-- Spring Container (스프링 컨테이너) [Bean Container]의 LifeCycle <br/>
-스프링 컨테이너(Bean 컨테이너)의 LifeCycle (라이프 사이클)에 대해 배워보자
+- <b>Servlet vs Spring</b>
+```
+Servlet과 Spring의 차이 (복습 필수)
+```
 
-### JavaSpringFrameworkTestMVC
+- <b>JavaSpringFrameworkTest</b>
+```
+SpringFramework이란?
+
+DI, XML
+DI을 타입별로 사용하는 방법
+XML을 기능별로 나누는 방법
+
+@Autowired, @resource
+@Autowired과 @resource의 어노테이션 사용 방법
+
+Qualifier, Injection
+Qualifier와 Injection을 사용하는 이유와 방법
+
+Spring Container (스프링 컨테이너) [Bean Container]의 LifeCycle
+스프링 컨테이너(Bean 컨테이너)의 LifeCycle (라이프 사이클)이란?
+```
+
+- <b>JavaSpringFrameworkTestMVC</b>
+```
 자바 스프링 프레임워크(renew ver.) - 신입 프로그래머를 위한 강좌
+```
 
-### SpringFrameworkMVC_Session
-자바 스프링 프레임워크에서 세션을 배워보자<br>
+- <b>SpringFrameworkMVC_Session</b>
+```
+자바 스프링 프레임워크에서 세션이란?
+세션 사용 방법
 
 + JDBC
 + JDBC Templete
 + JDBC ConnectPool
+```
 
-### SpringFrameworkMVC_Cookie
-자바 스프링 프레임워크에서 쿠키를 배워보자
+- <b>SpringFrameworkMVC_Cookie</b>
+```
+자바 스프링 프레임워크에서 쿠키란?
+쿠키 사용 방법
+```

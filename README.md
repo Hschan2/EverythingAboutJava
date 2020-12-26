@@ -117,5 +117,5 @@ Spring Container (스프링 컨테이너) [Bean Container]의 LifeCycle
 
 - <b>startStringboot</b>
 ```
-스트링부트 사용법 & Thymeleaf 사용법 (2020.08 학습)
+스트링부트 사용법 & Thymeleaf 사용 원리 (2020.08 학습)
 ```

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- applicationContext.xml을 분리하여 그 중 일부 기능을 가져옴 -->
+	<!-- xml파일 이름 지을 때 기능에 맞게 지어라 -->
+	<bean id="studentDao" class="ems.member.dao.StudentDao" ></bean>
+	
+	<bean id="registerService" class="ems.member.service.StudentRegisterService">
+	  <constructor-arg ref="studentDao" ></constructor-arg>
+	</bean>
+	
+	<bean id="modifyService" class="ems.member.service.StudentModifyService">
+	  <constructor-arg ref="studentDao" ></constructor-arg>
+	</bean>
+	
+	<bean id="deleteService" class="ems.member.service.StudentDeleteService">
+	  <constructor-arg ref="studentDao" ></constructor-arg>
+	</bean>
+	
+	<bean id="selectService" class="ems.member.service.StudentSelectService">
+	  <constructor-arg ref="studentDao" ></constructor-arg>
+	</bean>
+	
+	<bean id="allSelectService" class="ems.member.service.StudentAllSelectService">
+	  <constructor-arg ref="studentDao" ></constructor-arg>
+	</bean>
+	
+</beans>

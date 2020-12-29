@@ -50,6 +50,7 @@ public class Classpath {
 				C:\myClass 폴더를 기준으로 패키지를 찾고 A.class를 실행할 때
 				java -classpath "C:\myClass" A 라고 입력하면 클래스 패스를 지정할 수 있다.
 			
+			그 외, 다른 옵션들
 			-d
 				-d directory
 				클래스 파일을 생성할 루트 디렉토리를 지정한다.

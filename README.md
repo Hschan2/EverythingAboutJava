@@ -67,8 +67,58 @@ Spring이 무엇일까?
 SpringBoot(스프링부트)이란?
 
 JPA
-JPA이란? 
+JPA이란?
 JPA를 왜 사용해야 하는가?
+
+AOP (Aspect Oriented Programming)
+AOP란?
+AOP 기능
+AOP 사용 예시
+
+ARP (Address Resolution Protocol)
+ARP란?
+
+Bean
+Bean이란?
+Bean 사용하는 방법
+
+Block & Sync
+Block, Sync란?
+Block vs Non-Block
+Sync vs Async
+
+Cache
+Cache란?
+언제 사용하고 왜 사용하는가?
+
+Authorization & Certified
+Authorization, Certified이란?
+Certified의 장점과 단점
+
+ClassPath
+ClassPath란?
+ClassPath 사용하는 방법
+
+CORS (Cross-Origin Resource Sharing)
+CORS란?
+CORS 사용 예시
+
+DB Lock
+DB Lock이란?
+DB Lock 종류
+
+DDD (Domain Driven Design, 도메인 주도 설계)
+DDD (Domain Driven Design)이란?
+
+Deadlock (교착 상태)
+Deadlock란?
+Deadlock의 필수 조건
+Deadlock 해결 방법
+
+DNS (Domain Name System)
+DNS란?
+DNS 사용하는 방법
+DNS 서버의 종류
 ```
 
 - <b>Servlet vs Spring</b>

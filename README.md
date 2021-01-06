@@ -35,7 +35,7 @@ static과 자주 사용하는 이유는 무엇인가?
 Comparable
 Java에서 Comparable이란?
 
-Getter를 사용하는 대신 객체에 메시지를 보내는 것
+Getter를 사용하는 대신 객체에 메시지를 보내는 방법 사용하기
 
 하드코딩을 멀리하는 것
 좋지 않은 습관은 하드코딩
@@ -48,6 +48,14 @@ null 반환보다는 Optional을 활용하는 방법
 
 JAVA 변수명 네이밍 규칙
 읽기 좋은 코드 만들기
+
+일급 컬렉션을 사용하는 것. 그리그 그 이유
+
+전략 패턴
+예시로 학습하기
+
+Comparable
+Comparable의 타입
 ```
 
 - <b>AboutWeb_R</b>

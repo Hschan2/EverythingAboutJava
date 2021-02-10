@@ -254,6 +254,11 @@ aboutSpring
 Spring이란?
 SpringBoot란?
 SpringBoot에서 유효성 검사하기
+
+Enum
+Enum이란?
+Enum 활용
+ordinal
 ```
 
 - <b>Servlet vs Spring</b>

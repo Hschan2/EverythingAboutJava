@@ -82,6 +82,7 @@ AOP (Aspect Oriented Programming)
 AOP란?
 AOP 기능
 AOP 사용 예시
+AOP 빠르게 사용하는 방법
 
 ARP (Address Resolution Protocol)
 ARP란?
@@ -259,6 +260,10 @@ Enum
 Enum이란?
 Enum 활용
 ordinal
+
+Database
+SQL 실행 계획이란?
+SQL 실행 계획 확인 방법
 ```
 
 - <b>Servlet vs Spring</b>

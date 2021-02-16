@@ -268,6 +268,18 @@ SQL 실행 계획 확인 방법
 TDD
 테스트 코드 작성법 예시
 테스트 코드 실행 순서
+
+Jenkins 배포 자동화 (AWS EC2, Docker)
+AWS에서 EC2 instance 4G RAM 생성
+Jenkins (openjdk, docker, git) 설치
+두 개의 서버 사이에 private key와 public key 생성
+AWS에서 두 개의 EC2 instances 1G RAM 생성
+각각 docker와 run daemon 설치
+Jenkins Global Setting에서 app1, app2 등록
+SSH plugin에 대해 Publish 설치
+Jenkins 아이템 생성
+실행
+코드 업데이트하고 넣기
 ```
 
 - <b>Servlet vs Spring</b>

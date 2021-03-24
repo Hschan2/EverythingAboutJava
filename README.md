@@ -320,6 +320,10 @@ Spring Container (스프링 컨테이너) [Bean Container]의 LifeCycle
 + JDBC
 + JDBC Templete
 + JDBC ConnectPool
+
+JSP 파일에서 session 값 가져오기
+<% session = "true" %> 설정
+${sessionScope.~} 로 데이터 불러오기
 ```
 
 - <b>SpringFrameworkMVC_Cookie</b>

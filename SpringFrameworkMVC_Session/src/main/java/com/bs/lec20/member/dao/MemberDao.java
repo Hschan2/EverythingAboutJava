@@ -34,8 +34,6 @@ public class MemberDao implements IMemberDao {
 //	private ComboPooledDataSource dataSource; // ConnectionPool
 	private JdbcTemplate template;
 	
-	
-	
 	// Spring ver.
 	// private org.springframework.jdbc.datasource.DriverManagerDataSource dataSource;
 	
@@ -228,7 +226,7 @@ public class MemberDao implements IMemberDao {
 				mem.setMemPw(rs.getString("memPw"));
 				mem.setMemMail(rs.getString("memMail"));
 				mem.setMemPurcNum(rs.getInt("memPurcNum"));
-
+				
 				return mem;
 			}
 		

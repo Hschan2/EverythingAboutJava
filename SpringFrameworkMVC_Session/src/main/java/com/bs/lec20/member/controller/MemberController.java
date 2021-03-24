@@ -81,13 +81,13 @@ public class MemberController {
 	
 	// 세션을 이용한 두 번째 방법. 첫 번째 방법보다 한 단계정도 간단. 스프링에서 자주 사용
 	@RequestMapping(value = "/member/login", method = RequestMethod.POST)
-	public String memLogin(Member member, HttpSession session) {
+	public String memLogin(Member member, HttpSession session, Model model) {
 		
 		Member mem = service.memberSearch(member);
 		
 		if(mem == null) {
 			return "redirect:/member/loginForm";
-		} else {
+		} else {			
 			// getSession()이 필요 없이 바로 session을 set 하면 된다
 			session.setAttribute("member", mem);
 

@@ -4,30 +4,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>로그인 페이지</title>
-<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="/webjars/bootstrap/4.5.0/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
+	<title>로그인 페이지</title>
 </head>
 <body>
+	<div class="loginSet">
+		<h3 class="loginH3">회원 로그인</h3>
+		
+		<form:form action="${cp}/member/login" method="post" commandName="member" class="loginForm">
+			<form:input path="memId" placeholder="ID" class="loginInput" />
+			<form:password path="memPw" placeholder="PASSWORD" class="loginInput" />
+			<input type="submit" value="로그인" class="loginBtn">
+		</form:form>
+	</div>
 	
-	<h1>회원 로그인</h1>
-	
-	<form:form action="${cp}/member/login" method="post" commandName="member">
-		<table>
-			<tr>
-				<td>아이디</td>
-				<td><form:input path="memId" /></td>
-			</tr>
-			<tr>
-				<td>비밀번호</td>
-				<td><form:password path="memPw" /></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" value="로그인" ></td>
-			</tr>
-		</table>
-	</form:form>
-	
-	<a href="${cp}/">메인화면</a>
+	<div class="aLink">
+		<a href="${cp}/">메인화면</a>
+	</div>
 </body>
 </html>

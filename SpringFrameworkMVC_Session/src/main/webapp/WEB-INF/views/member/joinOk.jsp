@@ -3,17 +3,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
 	<title>회원가입 성공 페이지</title>
 </head>
 <body>
-	<h1>회원가입 성공</h1>
+	<h1>회원 가입을 완료하였습니다.</h1>
 	
-	아이디 : ${member.memId} <br />
-	비밀번호 : ${member.memPw} <br />
-	이메일 : ${member.memMail} <br />
+	ID : ${member.memId} <br />
+	PASSWORD : ${member.memPw} <br />
+	E-MAIL : ${member.memMail} <br />
 	
-	<P> 현재 시간은 ${serverTime}. </P>
+	<P class="timeNow"> 가입 시간 : ${serverTime}. </P>
 	
-	<a href="${cp}/">메인화면</a>
+	<div class="aLink">
+		<a href="${cp}/">메인화면</a>
+	</div>
 </body>
 </html>

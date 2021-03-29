@@ -4,22 +4,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
 <title>홈페이지</title>
 </head>
 <body>
+	<h3 class="loginH3">메인 화면</h3>
 	
-	<h1>메인 화면</h1>
-	
-	<c:if test="${empty member}"> <!-- 로그인이 안되어 있을 시 -->
-		<a href="${cp}/member/joinForm">회원가입</a> &nbsp;&nbsp; 
-		<a href="${cp}/member/loginForm">로그인</a> &nbsp;&nbsp; 
-	</c:if>
-	
-	<c:if test="${!empty member}"> <!-- 로그인이 되어 있을 시 -->
-		<a href="${cp}/member/modifyForm">회원수정</a> &nbsp;&nbsp; 
-		<a href="${cp}/member/logout">로그아웃</a> &nbsp;&nbsp;
-		<a href="${cp}/member/removeForm">회원탈퇴</a> &nbsp;&nbsp; 
-	</c:if>
-	
+	<div class="indexSet">
+		<div class="aLink">
+			<c:if test="${empty member}"> <!-- 로그인이 안되어 있을 시 -->
+				<a href="${cp}/member/joinForm">회원가입</a>
+				<a href="${cp}/member/loginForm">로그인</a>
+			</c:if>
+			
+			<c:if test="${!empty member}"> <!-- 로그인이 되어 있을 시 -->
+				<a href="${cp}/member/modifyForm">회원수정</a> 
+				<a href="${cp}/member/logout">로그아웃</a>
+				<a href="${cp}/member/removeForm">회원탈퇴</a>
+			</c:if>
+		</div>
+	</div>
 </body>
 </html>

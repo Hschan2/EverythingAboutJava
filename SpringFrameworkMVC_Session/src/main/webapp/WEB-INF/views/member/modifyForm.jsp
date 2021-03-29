@@ -5,36 +5,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>회원수정 페이지</title>
-<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
+	<title>회원수정 페이지</title>
 </head>
 <body>
-
-	<h1>회원수정</h1>
+	<h3 class="loginH3">회원 수정</h3>
 	
-	<form:form action="${cp}/member/modify" method="post" commandName="member">
-		<form:hidden path="memId" value="${member.memId}"/>
-		<table>
-			<tr>
-				<td>아이디</td>
-				<td>${member.memId}</td>
-			</tr>
-			<tr>
-				<td>비밀번호</td>
-				<td><form:password path="memPw" /></td>
-			</tr>
-			<tr>
-				<td>이메일</td>
-				<td><form:input path="memMail" value="${member.memMail}" /></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" value="수정" ></td>
-				<td colspan="2"><input type="reset" value="취소" ></td>
-			</tr>
-		</table>
-	</form:form>
+	<div class="loginSet">
+		<form:form action="${cp}/member/modify" method="post" commandName="member" class="loginForm">
+			<form:hidden path="memId" value="${member.memId}"/>
+			
+			<div class="loginInput">${member.memId}</div>
+			<form:password path="memPw" placeholder="PASSWORD" class="loginInput" />
+			<form:input path="memMail" placeholder="E-MAIL" class="loginInput" value="${member.memMail}" />
+			<input type="submit" value="수정" class="loginBtn">
+			<input type="button" value="취소" class="loginBtn" onClick="history.go(-1)">
+		</form:form>
+	</div>
 	
-	<a href="${cp}/">메인화면</a>
+	<div class="aLink">
+		<a href="${cp}/">메인화면</a>
+	</div>
 </body>
 </html>

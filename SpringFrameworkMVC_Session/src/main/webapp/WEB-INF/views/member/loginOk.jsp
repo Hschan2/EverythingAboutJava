@@ -6,18 +6,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
+	<link href="/webjars/bootstrap/4.5.0/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
 	<title>로그인 성공 페이지</title>
 </head>
 <body>
-	<h1>로그인 성공</h1>
+	<h3 class="loginH3">로그인에 성공하였습니다.</h3>
 	
-	<%-- session.setAttribute로 저장된 데이터 불러오기 => sessionScope~ --%>
-	아이디 : ${sessionScope.member.memId} <br />
-	비밀번호 : ${sessionScope.member.memPw} <br />
-	이메일 : ${sessionScope.member.memMail} <br />
-
-	<P> 현재 시간은 ${serverTime}. </P>
+	<div class="loginSet">
+		<%-- session.setAttribute로 저장된 데이터 불러오기 => sessionScope~ --%>
+		안녕하세요. ${sessionScope.member.memId}님
+		
+		<hr>
+		<div class="Informations">
+			${sessionScope.member.memId}님의 회원 정보 <br><br>
+			ID: ${sessionScope.member.memId} <br>
+			PASSWORD : ${sessionScope.member.memPw} <br>
+			E-MAIL : ${sessionScope.member.memMail}
+		</div>
+	</div>
 	
-	<a href="${cp}/">메인화면</a>
+	<P class="timeNow"> 로그인 시간 : ${serverTime}. </P>
+	
+	<div class="aLink">
+		<a href="${cp}/">메인화면</a>
+	</div>
 </body>
 </html>

@@ -5,36 +5,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>회원가입 페이지</title>
-<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
+	<title>회원가입 페이지</title>
 </head>
 <body>
-	<h1>회원가입</h1>
+	<h3 class="loginH3">회원가입</h3>
 	
-	<form:form action="${cp}/member/join" method="post" commandName="member">
-		<table>
-			<tr>
-				<td>아이디</td>
-				<td><form:input path="memId" /></td>
-			</tr>
-			<tr>
-				<td>비밀번호</td>
-				<td><form:password path="memPw" /></td>
-			</tr>
-			<tr>
-				<td>이메일</td>
-				<td><form:input path="memMail" /></td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input type="submit" value="가입" >
-					<input type="reset" value="취소" >
-				</td>
-			</tr>
-		</table>
-	</form:form>
+	<div class="loginSet">
+		<form:form action="${cp}/member/join" method="post" commandName="member" class="loginForm">
+		
+			<form:input path="memId" placeholder="ID" class="loginInput" />
+			<form:password path="memPw" placeholder="PASSWORD" class="loginInput" />
+			<form:input path="memMail" placeholder="E-MAIL" class="loginInput" />
+			<input type="submit" value="가입" class="loginBtn">
+			<input type="button" value="취소" class="loginBtn" onClick="history.go(-1)">
+		</form:form>
+	</div>
 	
-	<a href="${cp}/">메인화면</a>
+	<div class="aLink">
+		<a href="${cp}/">메인화면</a>
+	</div>
 </body>
 </html>

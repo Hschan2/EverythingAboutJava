@@ -4,32 +4,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>회원탈퇴 페이지</title>
-<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
+	<title>회원탈퇴 페이지</title>
 </head>
 <body>
+	<h3 class="loginH3">회원탈퇴</h3>
 	
-	<h1>회원탈퇴</h1>
+	<div class="loginSet">
+		<form:form action="${cp}/member/remove" method="post" commandName="member" class="loginForm">
+			<form:hidden path="memId" value="${member.memId}"/>
+			
+			<div class="loginInput">${member.memId}</div>
+			<form:password path="memPw" placeholder="PASSWORD" class="loginInput" />
+			<input type="submit" value="수정" class="loginBtn">
+			<input type="button" value="취소" class="loginBtn" onClick="history.go(-1)">
+		</form:form>
+	</div>
 	
-	<form:form action="${cp}/member/remove" method="post" commandName="member">
-		<input type="hidden" name="memId" value="${member.memId}">
-		<table>
-			<tr>
-				<td>아이디</td>
-				<td>${member.memId}</td>
-			</tr>
-			<tr>
-				<td>비밀번호</td>
-				<td><form:password path="memPw" /></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" value="삭제" ></td>
-				<td colspan="2"><input type="reset" value="취소" ></td>
-			</tr>
-		</table>
-	</form:form>
-	
-	<a href="${cp}/">메인화면</a>
+	<div class="aLink">
+		<a href="${cp}/">메인화면</a>
+	</div>
 </body>
 </html>

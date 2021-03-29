@@ -1,12 +1,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page session="true" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="${cp}/resources/css/normal.css" />
 	<title>회원수정 성공 페이지</title>
 </head>
 <body>
-	<h1>회원수정 성공</h1>
+	<h3 class="loginH3">회원 수정을 완료하였습니다.</h3>
 	
 	<%--
 	<h3> Before Modify </h3>
@@ -16,12 +17,14 @@
 	Mail : ${memBef.memMail} <br />
 	--%>
 	<h3> 회원수정 </h3>
-	아이디 : ${memAft.memId} <br />
-	비밀번호 : ${memAft.memPw} <br />
-	이메일 : ${memAft.memMail} <br />
+	ID : ${memAft.memId} <br />
+	PASSWORD : ${memAft.memPw} <br />
+	E-MAIL : ${memAft.memMail} <br />
 	
-	<P>  현재 시간은 ${serverTime}. </P>
+	<P class="timeNow"> 로그인 시간 : ${serverTime}. </P>
 	
-	<a href="/ch12/">메인화면</a>
+	<div class="aLink">
+		<a href="/ch12/">메인화면</a>
+	</div>
 </body>
 </html>

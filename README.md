@@ -16,7 +16,7 @@
 
 - <b>TDDproject</b>
 ```
-TDD(Test Driven Development, 테스트 주도 개발)이란? 
+TDD(Test Driven Development, 테스트 주도 개발)이란?
 TDD(Test Driven Development, 테스트 주도 개발)를 왜 사용해야 하는가?
 TDD(Test Driven Development, 테스트 주도 개발)의 장·단점은?
 ```
@@ -257,6 +257,7 @@ SpringBoot란?
 SpringBoot에서 유효성 검사하기
 Spring MongoDB 사용하기
 Spring 비동기화 (Future Library)
+JPA 시작하는 방법 & 소소한 팁
 
 Enum
 Enum이란?

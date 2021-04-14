@@ -258,6 +258,7 @@ SpringBoot에서 유효성 검사하기
 Spring MongoDB 사용하기
 Spring 비동기화 (Future Library)
 JPA 시작하는 방법 & 소소한 팁
+HTTPS & SSL 기본적인 사용법 (Local)
 
 Enum
 Enum이란?

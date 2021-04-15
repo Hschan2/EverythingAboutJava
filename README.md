@@ -259,6 +259,7 @@ Spring MongoDB 사용하기
 Spring 비동기화 (Future Library)
 JPA 시작하는 방법 & 소소한 팁
 HTTPS & SSL 기본적인 사용법 (Local)
+JPA 연관 관계 (OneToMany, ManyToOne, OneToOne, ManyToMany)
 
 Enum
 Enum이란?

@@ -1,24 +1,21 @@
-## 자바에 대한 모든 것
+# 자바에 대한 모든 것
 
-### Inflearn
+## Inflearn
 
-#### 자바 기본 [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/Inflearn)
+### 자바 기본 [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/Inflearn)
 * JAVA 객체
 * JAVA 상속 및 클래스
 * JAVA 마무리
----
 
-### Encapsulation
+## Encapsulation [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/Encapsulation)
 * 캡슐화
----
 
-### TDDproject
+## TDDproject [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/TDDproject)
 * 테스트 주도 개발
 * 테스트 주도 개발 사용 이유
 * 테스트 주도 개발 장점, 단점
----
 
-### CleanCode
+## CleanCode [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/CleanCode)
 * TDD와 CleanCode로 깨끗한 코드를 작성
 * 전략 패턴
 * Final, Static
@@ -31,9 +28,8 @@
 * JAVA 변수명 네이밍 규칙
 * 읽기 좋은 코드
 * 일급 컬렉션
----
 
-### AboutWeb_R
+## AboutWeb_R [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java)
 * Web에서 요청과 응답
 * 빌드와 배포 (Build, Deploy)
 * JDBC, SQLMapper, ORM
@@ -81,19 +77,19 @@
 * Database, SQL 실행 계획
 * TDD (테스트 코드)
 
-#### Spring
+### Spring [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java/aboutSpring)
 * SpringBoot
 * Future Library
 * JPA
 * HTTPS & SSL (Local)
 * JPA 연관 관계
 
-#### Opentutorials
+### Opentutorials [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java/opentutorials)
 * 생활코딩 자바 강의
 * 자바에서 인터페이스
 * 자바에서 예외 처리
 
-#### Jenkins 배포 자동화 (AWS EC2, Docker)
+### Jenkins 배포 자동화 (AWS EC2, Docker)
 1. AWS에서 EC2 instance 4G RAM 생성   
 2. Jenkins (openjdk, docker, git) 설치   
 3. 두 개의 서버 사이에 private key와 public key 생성   
@@ -105,12 +101,10 @@
 9. 실행   
 10. 코드 업데이트하고 넣기   
 
----
-
-### Servlet vs Spring
+## Servlet vs Spring [Link](https://github.com/Hschan2/EverythingAboutJava/blob/master/AboutWeb_R/src/com/java/servletandspring/Main.java)
 * Servlet과 Spring의 차이
 
-### JavaSpringFrameworkTest
+## JavaSpringFrameworkTest [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTest)
 * SpringFramework
 * DI, XML
 * @Autowired, @resource
@@ -118,16 +112,16 @@
 * Spring Container (스프링 컨테이너)
 * Bean Container의 LifeCycle
 
-### JavaSpringFrameworkTestMVC
+## JavaSpringFrameworkTestMVC [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTestMVC)
 * 자바 스프링 프레임워크(renew ver.) - 신입 프로그래머를 위한 강좌
 
-### SpringFrameworkMVC_Session
+## SpringFrameworkMVC_Session [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/SpringFrameworkMVC_Session)
 * 자바 스프링 프레임워크의 세션
 * JDBC (Templete, ConnectPool)
 
-### SpringFrameworkMVC_Cookie
+## SpringFrameworkMVC_Cookie [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/SpringFrameworkMVC_Cookie)
 * 자바 스프링 프레임워크의 쿠키
 
-### startStringboot
+## startStringboot [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/startStringboot)
 * StringBoot
 * Thymeleaf

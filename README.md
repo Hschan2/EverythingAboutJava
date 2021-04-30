@@ -128,3 +128,5 @@
 
 ## 우아한테크 유튜브 테코톡 [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/WoowaTech)
 * JCF
+* DTO vs VO
+* MVC

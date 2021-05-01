@@ -130,3 +130,4 @@
 * JCF
 * DTO vs VO
 * MVC
+* Generic

@@ -28,6 +28,7 @@
 * JAVA 변수명 네이밍 규칙
 * 읽기 좋은 코드
 * 일급 컬렉션
+* 코딩 잘하는 팁 세 가지 (유튜브 엘리)
 
 ## AboutWeb_R [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java)
 * Web에서 요청과 응답

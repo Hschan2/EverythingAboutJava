@@ -133,3 +133,4 @@
 * MVC
 * Generic
 * DOM & BOM
+* Strategy Pattern

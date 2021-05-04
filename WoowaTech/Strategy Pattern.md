@@ -390,7 +390,7 @@ public class Main {
 ```
 
 ## 전략 패턴 UML
-![UML]('../Image/UML.PNG')
+![UML](./Image/UML.PNG)
 
 ## 전략 패턴 in JDK
 

@@ -134,3 +134,4 @@
 * Generic
 * DOM & BOM
 * Strategy Pattern
+* THIS

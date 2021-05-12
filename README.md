@@ -141,3 +141,4 @@
 * ProtoType
 * EventLoop
 * TDD와 단위 테스트
+* 빌드와 배포

@@ -144,3 +144,4 @@
 * 빌드와 배포
 * JUnit5 사용법
 * 상태 패턴
+* Scope, Closure

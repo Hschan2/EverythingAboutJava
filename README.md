@@ -146,3 +146,4 @@
 * 상태 패턴
 * Scope, Closure
 * Callback
+* 싱글턴과 정적 클래스

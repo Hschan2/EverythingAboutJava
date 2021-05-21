@@ -149,3 +149,4 @@
 * 싱글턴과 정적 클래스
 * OOP (객체지향 프로그래밍)
 * Stream
+* Git Branch Strategy

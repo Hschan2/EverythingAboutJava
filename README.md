@@ -151,3 +151,4 @@
 * Stream
 * Git Branch Strategy
 * SPA (Single-page Application)
+* Framework vs Library vs API

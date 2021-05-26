@@ -153,3 +153,4 @@
 * SPA (Single-page Application)
 * Framework vs Library vs API
 * Git Commands
+* ORM vs SQL Mapper vs JDBC

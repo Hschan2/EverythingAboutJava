@@ -37,7 +37,7 @@
 * JDBC, SQLMapper, ORM
 * 상속과 인터페이스, 예외
 * Spring, SpringBoot
-* JPA
+* JPA (StartJPA로 간단한 예제, jpaMapping)
 * AOP (Aspect Oriented Programming)
 * ARP (Address Resolution Protocol)
 * Bean

@@ -158,3 +158,4 @@
 * 웹 접근성과 표준
 * Web Server vs WAS
 * Virtual DOM
+* Forward Proxy vs Reverse Proxy vs Load Balancer

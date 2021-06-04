@@ -159,3 +159,4 @@
 * Web Server vs WAS
 * Virtual DOM
 * Forward Proxy vs Reverse Proxy vs Load Balancer
+* Browser Rendering

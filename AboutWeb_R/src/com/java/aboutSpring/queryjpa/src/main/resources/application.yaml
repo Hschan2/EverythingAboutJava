@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active: local
+
+--- #local
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpa?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: root
+    password: 111111
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # 플랫폼 섲렁
+    database: mysql # 데이터베이스 설정 값 세팅
+    generate-ddl: false # 톰캣 동작할 때, 어떤 동작을 할지 결정
+    open-in-view: false # 영속성을 어느 범위까지 설정할지 결정
+    show-sql: true # 실행하는 쿼리 보이기
+    hibernate:
+      ddl-auto: create    # 항상 조심!!
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true # 쿼리를 깔끔하게 보이기
+        use_sql_comments: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG # 로그 레벨 설정
+        type:
+          trace

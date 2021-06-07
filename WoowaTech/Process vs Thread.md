@@ -1,4 +1,4 @@
-# Process vs Thread
+# Process vs Thread (프로세스 vs 스레드)
 
 ## 시작 전 Keywords
 * 실행 단위: CPU Core에서 실행하는 하나의 단위로 프로세스와 스레드를 포괄하는 개념

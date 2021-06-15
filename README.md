@@ -37,7 +37,7 @@
 * JDBC, SQLMapper, ORM
 * 상속과 인터페이스, 예외
 * Spring, SpringBoot
-* JPA (예제: StartJPA, jpaMapping | JPA with Mysql 예제: jpaExample_1 | queryjpa)
+* JPA (예제: StartJPA, jpaMapping | JPA with Mysql 예제: jpaExample_1 | queryjpa(JPA + Mysql))
 * AOP (Aspect Oriented Programming)
 * ARP (Address Resolution Protocol)
 * Bean

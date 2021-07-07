@@ -166,3 +166,6 @@
 
 ## StyleInWeb (CSS Study)
 * Product Card UI
+
+## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
+* 변수 아끼기

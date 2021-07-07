@@ -169,3 +169,4 @@
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기
+* 파라미터 적절하게 사용하기

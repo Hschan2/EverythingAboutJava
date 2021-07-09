@@ -163,6 +163,7 @@
 * Blocking vs Non-Blocking, Sync vs Async
 * Process vs Thread
 * CORS (Cross-Origin Resource Sharing)
+* 프론트엔드에서 비동기
 
 ## StyleInWeb (CSS Study)
 * Product Card UI
@@ -172,3 +173,4 @@
 * 파라미터 적절하게 사용하기
 * IF 문 역으로 바꾸기
 * FOR 문 분리하기
+* 섞인 계산과 계산 로직 분리

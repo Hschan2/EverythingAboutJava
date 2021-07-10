@@ -164,6 +164,7 @@
 * Process vs Thread
 * CORS (Cross-Origin Resource Sharing)
 * 프론트엔드에서 비동기
+* 프론드엔드에서의 테스트 종류 (브라우저, Node.js, ...)
 
 ## StyleInWeb (CSS Study)
 * Product Card UI

@@ -165,6 +165,7 @@
 * CORS (Cross-Origin Resource Sharing)
 * 프론트엔드에서 비동기
 * 프론드엔드에서의 테스트 종류 (브라우저, Node.js, ...)
+* HTTP 1.0, HTTP 1.1, HTTP 2, QUIC
 
 ## StyleInWeb (CSS Study)
 * Product Card UI

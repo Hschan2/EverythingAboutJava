@@ -166,6 +166,7 @@
 * 프론트엔드에서 비동기
 * 프론드엔드에서의 테스트 종류 (브라우저, Node.js, ...)
 * HTTP 1.0, HTTP 1.1, HTTP 2, QUIC
+* OSI 7 Layer
 
 ## StyleInWeb (CSS Study)
 * Product Card UI
@@ -176,3 +177,4 @@
 * IF 문 역으로 바꾸기
 * FOR 문 분리하기
 * 섞인 계산과 계산 로직 분리
+* 클래스, 메서드 기능별 역할별 나누기

@@ -167,6 +167,7 @@
 * 프론드엔드에서의 테스트 종류 (브라우저, Node.js, ...)
 * HTTP 1.0, HTTP 1.1, HTTP 2, QUIC
 * OSI 7 Layer
+* 프론트엔드에서 컴포넌트
 
 ## StyleInWeb (CSS Study)
 * Product Card UI

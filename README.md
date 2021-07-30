@@ -1,7 +1,6 @@
 # 자바에 대한 모든 것
 
 ## Inflearn
-
 ### 자바 기본 [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/Inflearn)
 * JAVA 객체
 * JAVA 상속 및 클래스
@@ -36,7 +35,6 @@
 * 빌드와 배포 (Build, Deploy)
 * JDBC, SQLMapper, ORM
 * 상속과 인터페이스, 예외
-* Spring, SpringBoot
 * JPA (예제: StartJPA, jpaMapping | JPA with Mysql 예제: jpaExample_1 | queryjpa(JPA + Mysql))
 * AOP (Aspect Oriented Programming)
 * ARP (Address Resolution Protocol)
@@ -57,7 +55,6 @@
 * HTTP & QUIC
 * Index
 * Interface (인터페이스)
-* Spring IoC/DI
 * Logging (로깅)
 * NetworkSecurity
 * OSI 7계층
@@ -66,11 +63,8 @@
 * Real Time Web (실시간 웹 구현)
 * Redis (Remote Dictionary Server)
 * RegularExpression (정규표현식)
-* Spring Security
 * Serialization (자바 직렬화)
 * WAS (Web Application Server)
-* Spring Batch
-* Spring Webflux
 * TestIsolation (테스트 격리)
 * Transaction (트랜잭션)
 * Web Socket (웹 소켓)
@@ -78,13 +72,6 @@
 * Enum (ordinal)
 * Database, SQL 실행 계획
 * TDD (테스트 코드)
-
-### Spring [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java/aboutSpring)
-* SpringBoot
-* Future Library
-* JPA
-* HTTPS & SSL (Local)
-* JPA 연관 관계
 
 ### Opentutorials [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java/opentutorials)
 * 생활코딩 자바 강의
@@ -103,8 +90,24 @@
 9. 실행   
 10. 코드 업데이트하고 넣기   
 
-## Servlet vs Spring [Link](https://github.com/Hschan2/EverythingAboutJava/blob/master/AboutWeb_R/src/com/java/servletandspring/Main.java)
-* Servlet과 Spring의 차이
+## Spring, SpringBoot [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot)
+* Spring, SpringBoot
+* aboutSpring
+    * SpringBoot
+    * Future Library
+    * JPA
+    * HTTPS & SSL (Local)
+    * JPA 연관 관계
+* startSpringBoot
+    * StringBoot
+    * Thymeleaf
+* Servlet vs Spring
+    * Servlet과 Spring의 차이
+* Spring IoC/DI
+* Spring Security
+* Spring Batch
+* Spring Webflux
+* Mybatis In SpringBoot
 
 ## JavaSpringFrameworkTest [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTest)
 * SpringFramework
@@ -123,10 +126,6 @@
 
 ## SpringFrameworkMVC_Cookie [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/SpringFrameworkMVC_Cookie)
 * 자바 스프링 프레임워크의 쿠키
-
-## startStringboot [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/startStringboot)
-* StringBoot
-* Thymeleaf
 
 ## 우아한테크 유튜브 테코톡 [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/WoowaTech)
 * JCF

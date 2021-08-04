@@ -105,7 +105,9 @@
     * Servlet과 Spring의 차이
 * Spring IoC/DI
 * Spring Security
-    * 마이크로소프트 개발자 백기선의 팁 (demoSpringBootSecurity)
+    * 마이크로소프트 개발자 백기선 동영상 (demoSpringBootSecurity)
+        * 공식 문서 따라하기
+        * detailUser, EncodePassword
 * Spring Batch
 * Spring Webflux
 * Mybatis In SpringBoot
@@ -127,6 +129,14 @@
 
 ## SpringFrameworkMVC_Cookie [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/SpringFrameworkMVC_Cookie)
 * 자바 스프링 프레임워크의 쿠키
+
+## Java·Web Study Project
+* Java
+    * Calculator
+    * Lotto
+* Web
+    * StyleInWeb
+    * New Javascript Function
 
 ## 우아한테크 유튜브 테코톡 [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/WoowaTech)
 * JCF
@@ -168,9 +178,7 @@
 * HTTP 1.0, HTTP 1.1, HTTP 2, QUIC
 * OSI 7 Layer
 * 프론트엔드에서 컴포넌트
-
-## StyleInWeb (CSS Study)
-* Product Card UI
+* 인증과 인가
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기

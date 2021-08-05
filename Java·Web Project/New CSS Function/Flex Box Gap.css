@@ -1,0 +1,8 @@
+/* Flex 사용 시 각 요소 간 간격을 위해 Margin을 사용한 것을 대체 */
+/* Internet Explorer 지원 안함 */
+
+div {
+    display: flex;
+    /* gap: row-gap column-gap */
+    gap: 10px 5px;
+}

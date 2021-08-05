@@ -1,0 +1,15 @@
+/* 수 많은 요소 선택하기 */
+/* Internet Explorer 지원 안함 */
+
+/* 사용 전 */
+header button,
+nav button,
+form button {
+    background-color: tomato;
+}
+
+/* 사용 후 */
+:is(header, nav, form) button {
+    background-color: tomato;
+}
+

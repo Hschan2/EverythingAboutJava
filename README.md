@@ -182,6 +182,7 @@
 * 프론트엔드에서 컴포넌트
 * 인증과 인가
 * 네트워크 보안
+* Cashing (캐싱)
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기
@@ -194,3 +195,4 @@
 * 쿼리에서 로직 빼기
 * 커넥션풀 (Connection Pool)
 * DB 트랜잭션 기초-1
+* G1 GC 경험

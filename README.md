@@ -73,6 +73,7 @@
 * Enum (ordinal)
 * Database, SQL 실행 계획
 * TDD (테스트 코드)
+* Semantic Versioning
 
 ### Opentutorials [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java/opentutorials)
 * 생활코딩 자바 강의
@@ -184,6 +185,7 @@
 * 네트워크 보안
 * Cashing (캐싱)
 * CSS 방법론
+* Logging (로깅)
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기

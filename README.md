@@ -206,4 +206,5 @@
 * API의 연동 횟수를 줄이고 속도 개선하기 (Caffeine Cache)
 
 ## Tips
-* 서버 개발을 시작하는 사람들을 위한 엘리의 Linux Tips
+* 서버 개발을 시작하는 사람들을 위한 엘리의 Linux Tips (엘리 유튜브)
+* CI/CD (엘리의 유튜브)

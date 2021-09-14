@@ -189,6 +189,7 @@
 * 프론트엔드 성능 측정
 * 트랜잭션
 * Flyway
+* 선형 자료구조
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기

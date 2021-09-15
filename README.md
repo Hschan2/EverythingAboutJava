@@ -190,6 +190,7 @@
 * 트랜잭션
 * Flyway
 * 선형 자료구조
+* 프론트엔드에서 에러 핸들링
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기

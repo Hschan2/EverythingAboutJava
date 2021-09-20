@@ -193,6 +193,7 @@
 * 프론트엔드에서 에러 핸들링
 * 웹 스토리지와 쿠키
 * 최단 경로와 최소 신장트리
+* 불변성
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기

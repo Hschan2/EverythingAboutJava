@@ -195,6 +195,7 @@
 * 최단 경로와 최소 신장트리
 * 불변성
 * 지속적 배포
+* 정렬 알고리즘
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기

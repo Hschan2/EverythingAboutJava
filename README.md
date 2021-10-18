@@ -198,6 +198,7 @@
 * 정렬 알고리즘
 * 애자일
 * Generator & Iterator
+* JVM Specification
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기

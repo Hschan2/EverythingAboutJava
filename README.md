@@ -113,7 +113,7 @@
 * Spring Batch
 * Spring Webflux
 * Mybatis In SpringBoot
-* Singleton (싱글톤) 실사용 1단계
+* 백기선의 싱글톤 (Singleton)
 
 ## JavaSpringFrameworkTest [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTest)
 * SpringFramework

@@ -14,6 +14,12 @@ public class SingletonApplication {
 //				* 시스템 런타임, 환경 세팅에 대한 정보 등 잉ㄴ스턴스가 여러 개일 때 문제가 생길 수 있는 경우 존재
 //				그럴 경우, 인스턴스를 오직 한 개만 만들어 제공하는 클래스 필요
 
+//		실무에서 사용
+//				스프링에서 빈의 스코프 중 하나로 싱글톤 스코프
+//				자바의 java.lang.Runtime
+//				다른 디자인 패턴 (빌더, 퍼사드, 추상 팩토리 등) 구현체의 일부로 사용
+//				Runtime.class, Spring.class & SpringConfig.class 에서 예시
+
 //		Singleton
 //				- instance: Singleton
 //				+ getInstance(): Singleton

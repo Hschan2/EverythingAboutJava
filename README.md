@@ -220,6 +220,7 @@
 * 자바 주요 특징 (9 ver ~ 16 ver)
 * Sealed Type (Java 17 ver)
 * 리팩토링 (영상 시청 필수)
+* 똑똑한 UI와 바보 서버
 ## Tips
 * 서버 개발을 시작하는 사람들을 위한 엘리의 Linux Tips (엘리 유튜브)
 * CI/CD (엘리의 유튜브)

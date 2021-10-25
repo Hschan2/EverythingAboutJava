@@ -113,7 +113,8 @@
 * Spring Batch
 * Spring Webflux
 * Mybatis In SpringBoot
-* 백기선의 싱글톤 (Singleton)
+* 백기선의 싱글톤 패턴(Singleton)
+* 백기선의 프록시 패턴(Proxy)
 
 ## JavaSpringFrameworkTest [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTest)
 * SpringFramework

@@ -12,10 +12,12 @@ public class GameServiceProxyAfter implements GameService {
 //        this.gameService = gameService;
 //    }
 
+//    GameService의 코드 재사용
     @Override
     public void startGame() {
         long before = System.currentTimeMillis();
 
+//        아래처럼 작성하여 만약 비용이 많이 들 때, 사용할 때만 가져올 수 있도록 시간 지연하는 것이 프록시 패턴 장점
         if (this.gameService == null) {
             this.gameService = new DefaultGameService();
         }
@@ -23,5 +25,7 @@ public class GameServiceProxyAfter implements GameService {
         
         gameService.startGame();
         System.out.println(System.currentTimeMillis() - before);
+
+//        return 타입이 있을 경우 캐싱 적용 가능한 것도 프록시 패턴의 장점
     }
 }

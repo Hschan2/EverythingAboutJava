@@ -22,6 +22,13 @@ public class ProxyApplication {
         GameService gameService = new GameServiceProxy();
         gameService.startGame();
 
+//        프록시 패턴의 장점
+//                기존 코드를 변경하지 않고 새로운 기능을 추가할 수 있다.
+//                기존 코드가 해야하는 일만 유지할 수 있다.
+//                기능 추가 및 초기화 지연 등으로 다양하게 활용할 수 있다.
+
+//        프록시 패턴의 단점
+//                코드의 복잡도가 증가한다.
 
 	}
 

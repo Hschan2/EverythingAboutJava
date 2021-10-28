@@ -3,6 +3,8 @@ package com.example.proxy;
 import com.example.proxy.proxys.GameServiceProxy;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootApplication
 public class ProxyApplication {
@@ -30,6 +32,13 @@ public class ProxyApplication {
 //        프록시 패턴의 단점
 //                코드의 복잡도가 증가한다.
 
+//		자바와 스프링에서의 프록시 패턴
+//				자바
+//						다이나믹 프록시 (Runtime과 관련, 앱 실행중에 동적으로 변경 가능 )
+//						java.lang.reflect.Proxy
+//				스프링
+//						스프링 AOP
+//							스프링 AOP는 다른 스프링 어노테이션의 기반. (예. @Transactional, @Cacheable 등) 그러니 더 알아볼 것을 추천
 	}
 
 }

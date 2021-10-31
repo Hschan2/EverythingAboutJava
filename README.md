@@ -115,6 +115,7 @@
 * Mybatis In SpringBoot
 * 백기선의 싱글톤 패턴(Singleton)
 * 백기선의 프록시 패턴(Proxy)
+* 금융 IT 개발자의 Jwt Certification
 
 ## JavaSpringFrameworkTest [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTest)
 * SpringFramework
@@ -223,6 +224,7 @@
 * 리팩토링 (영상 시청 필수)
 * 똑똑한 UI와 바보 서버
 * 이야기: 안 쓰는 코드는 삭제하자
+
 ## Tips
 * 서버 개발을 시작하는 사람들을 위한 엘리의 Linux Tips (엘리 유튜브)
 * CI/CD (엘리의 유튜브)

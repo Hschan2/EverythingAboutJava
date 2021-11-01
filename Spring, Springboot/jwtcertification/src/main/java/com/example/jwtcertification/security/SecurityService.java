@@ -42,11 +42,19 @@ public class SecurityService {
     public String getSubject(String token) {
 //        claim 생성
         Claims claims = Jwts.parserBuilder()
-                .setSigningKey(DatatypeConverter.parseBase64Binary(SECRET_KEY))
-                .build()
-                .parseClaimsJws(token) // Token 풀기
-                .getBody();
+                    .setSigningKey(DatatypeConverter.parseBase64Binary(SECRET_KEY))
+                    .build()
+                    .parseClaimsJws(token) // Token 풀기
+                    .getBody();
 
         return claims.getSubject();
+    }
+
+    public Claims getClaims(String token) {
+        return Jwts.parserBuilder()
+                    .setSigningKey(DatatypeConverter.parseBase64Binary(SECRET_KEY))
+                    .build()
+                    .parseClaimsJws(token)
+                    .getBody();
     }
 }

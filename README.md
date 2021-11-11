@@ -208,6 +208,7 @@
 * 브랜칭 전략
 * GC (Garbage Collection)
 * HTTPS
+* Deadlock (교착 상태)
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기

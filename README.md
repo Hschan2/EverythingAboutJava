@@ -211,6 +211,7 @@
 * Deadlock (교착 상태)
 * TCP/IP
 * RESTful
+* Mutex vs Semaphore
 
 ## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
 * 변수 아끼기

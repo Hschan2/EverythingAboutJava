@@ -1,0 +1,67 @@
+/* 2022년 새롭게 짜는 CSS */
+/* 현재 사용할 수 있는 것은 Container-query만 가능 */
+/* 지금까지 브라우저 폭에 반응한 CSS, 그러나 @Container로 부모 박스 폭에 반응하는 CSS 작성 가능 */
+
+
+
+/* Before @Media */
+/* 브라우저 폭이 768px 이하라면 */
+@media (max-width: 768px) {
+    .text {
+        /* 이를 적용할 것 */
+        font-size: 16px;
+    }
+}
+
+/* After @container */
+.card-container {
+    /* 기준점(부모 박스) */
+    contain: style layout inline-size;
+}
+
+/* 부모 박스가 350px 이하라면 */
+@container (max-width: 350px) {
+    /* 이를 적용할 것 */
+    .text {
+        font-size: 15px;
+    }
+}
+
+/* @Scope = 모든 것에 적용하는 것이 아닌 특정 Component 안에만 적용 */
+/* Before */
+.title {
+    font-size: 16px;
+}
+
+/* After */
+/* .card-container부터 .content까지만 적용 */
+@scope (.card-container) to (.content) {
+    .title {
+        font-size: 16px;
+    }
+}
+
+/* Nesting 문법 추가 예정 */
+.card-container {
+    .title {
+        font-size: 16px;;
+    }
+}
+
+/* Scroll-based 애니메이션 추가 예정 */
+/* Before */
+@keyframes shake {
+    0% {
+
+    }
+
+    50% {
+
+    }
+
+    100% {
+
+    }
+}
+
+/* 스크롤 시 화면 위치에 따라 CSS 적용하는 것이 자바스크립트에서 적용하는 것이 아닌 CSS 기본 문법으로 나올 예정 */

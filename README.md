@@ -247,3 +247,4 @@
 * Session vs Token vs Cookie (노마드코더 유튜브)
 * A 태그 보안 코드
 * 2022 New CSS
+* CSS, Before와 After의 활용

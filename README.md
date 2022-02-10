@@ -100,6 +100,7 @@
     * JPA
     * HTTPS & SSL (Local)
     * JPA 연관 관계
+    * IOC & PSA (기존 코드를 테스트 코드로 변경하는 방법)
 * startSpringBoot
     * StringBoot
     * Thymeleaf

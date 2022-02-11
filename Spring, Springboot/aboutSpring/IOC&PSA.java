@@ -97,3 +97,73 @@ public class RepositoryRank {
         System.out.println(point);
     }
 }
+
+/*
+    IoC (Inversion of Control)
+        ApplicationContext
+        Bean을 만들고 엮어주며 제공한다.
+        Controller, Repository가 Bean으로 등록되어 사용된다.
+        인텔리제이에서 왼쪽에 초록생 콩 모양이 Bean을 사용한다는 의미
+        @Controller, 인터페이스 상속, @Bean으로 직접 등록 등을 사용했을 시 Bean을 사용
+        의존성 주입은 Bean끼리만 가능 => 스프링 IoC 컨테이너 안에 들어있는 객체 끼리만 가능
+
+        ***
+        등록된 모든 Bean 확인하기
+
+        @Autowired
+        ApplicationContext applicationContext;
+
+        @Test
+        public void getBean() {
+            applicationContext.getBeanDefinitionNames(); // 등록된 모든 Bean의 이름 가져오기
+            applicationContext.getBean("Bean 이름"); // 해당 Bean의 내용 가져오기
+            applicationContext.getBean(...Controller.class); // Controller는 모두 Bean으로 저장되어 있기 때문에
+            assertThat(bean).isNotNull(); // Bean이 있으면 가져오기
+        }
+        ***
+
+        ***
+        위 방법과 다르게 아래 방법도 있지만 이 처럼 ApplicationContext를 직접 사용하지는 않는다.
+
+        private final ApplicationContext applicationContext;
+        
+        생성자에 applicationContext 등록 (this.applicationContext = applicationContext)
+
+        @GetMapping("/bean")
+        @ResponseBody
+        public String bean() {
+            return "bean: " + applicationContext.getBean(...Controller.class);
+        }
+        ***
+
+        ***
+        위 방법은 아래처럼 쓴다. 왜냐하면 Repository에 이미 Bean이 자동 주입이 되어 있기 때문이다.
+
+        private final AbcRepository Repo;
+
+        @GetMapping("/bean")
+        @ResponseBody
+        public String bean() {
+            return "bean: " + applicationContext.getBean(Repo);
+        }
+        ***
+
+        강의 - https://www.youtube.com/watch?v=NOAajiABq6A
+
+    PSA (portable service abstraction)
+        스프링 웹 MVC가 PSA의 한 부분
+            HttpServlet을 사용하여 Mapping하는 것이 아닌 @Controller을 선언하여 Mapping을 자유롭게 사용 가능
+
+        스프링 트랜잭션
+            어떤 데이터 베이스의 데이터를 주고 받을 때, 모든 작업이 다 되어야 하나의 작업으로 완료하는 경우를 말한다.
+            모든 작업이 되야 성공이고 안 되면 실패로 간주해야 한다.
+            예. 쇼핑몰에서 구입했을 때, 돈을 주었는데 물건이 없다면 취소하고 돈을 돌려줘야 한다.
+            트랜잭션을 설정(@Transactional)하면 연결, 데이터 값 설정, 커밋 코드를 직접 작성하지 않아도 된다.
+
+        스프링 캐시
+        @Cacheable를 사용하여 캐시를 자동으로 사용하도록 한다.
+
+        강의 - https://www.youtube.com/watch?v=P3vzrqADl8I
+
+    의존성 주입 (DI)
+*/

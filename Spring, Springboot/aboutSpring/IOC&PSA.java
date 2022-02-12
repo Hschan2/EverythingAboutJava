@@ -165,5 +165,28 @@ public class RepositoryRank {
 
         강의 - https://www.youtube.com/watch?v=P3vzrqADl8I
 
-    의존성 주입 (DI)
+    의존성 주입 (DI, Dependency Injection)
+        @Autowired (4.3 버전 이상은 생략 가능)
+            생성자에, Setter에, 필드에 사용 가능
+            생성자가 하나고 생성자로 주입받는 레퍼런스 변수들이 Bean으로 등록되었을 시 해당 Bean 자동 주입
+            Repository를 Bean으로 등록하지 않았을 시, Autowired가 자동 주입이 되지 않음
+            여기서 생성자를 사용하는 것을 권장
+            
+            ***
+            @Autowired
+            private final ...Repository repo;
+
+            보다는
+
+            public 클래스명(...Repository clientService) {
+                this.user = clientService;
+            }
+
+            를 사용하는 것을 권장
+            ***
+
+            만약 순환참조 (A -> B 참조, B -> A 참조)일 경우에는 생성자가 아닌 필드나 Setter를 사용하는 것을 권장
+            Setter, 필드 인젝션을 할 경우 final 사용하지 말 것. 해당 인스턴스를 만들어야 하기 때문
+
+        강의 - https://www.youtube.com/watch?v=IVzYerodIyg
 */

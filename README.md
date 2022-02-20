@@ -30,6 +30,10 @@
 * 코딩 잘하는 팁 세 가지 (유튜브 엘리)
 * 실무에서 바로 쓰는 프론트엔드 클린코드 (SLASH 21)
 * 자바스크립트 프로처럼 쓰는 법 by 엘리
+* 백기선의 리팩토링
+    * 이해하기 힘든 이름
+    * 함수 선언 변경하기
+    * 변수 이름 바꾸기
 
 ## AboutWeb_R [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java)
 * Web에서 요청과 응답

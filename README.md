@@ -121,6 +121,7 @@
 * 백기선의 싱글톤 패턴(Singleton)
 * 백기선의 프록시 패턴(Proxy)
 * 금융 IT 개발자의 Jwt Certification, 예외 처리, AOP
+* Unchecked Exception 발생에 관해 (백기선)
 
 ## JavaSpringFrameworkTest [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTest)
 * SpringFramework

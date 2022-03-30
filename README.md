@@ -271,3 +271,4 @@
 * CSS, Before와 After의 활용
 * 테스트 코드와 TDD By 엘리 (무료 강의 링크 포함)
 * Finalizer 공격
+* 생성자 대신 정적 팩토리를 고려하기

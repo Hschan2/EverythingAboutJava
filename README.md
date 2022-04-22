@@ -268,6 +268,7 @@
     * JPA Entity Mapping
     * JPA Entity 식별자 생성
     * JPA @Embeddable
+    * JPA @Embeddable 다른 테이블에 매핑하기
 
 ## Effective Java (이펙티브 자바)
 * 생성자 대신 정적 팩토리를 고려하기 (+ 자바 코드 예시)

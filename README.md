@@ -264,13 +264,9 @@
 * 이야기: 실용주의 프로그래머 팁 10
 * JPA 시작해보기
     * JPA 코드 분석
-    * JPA Entity CRUD
-    * JPA Entity Mapping
-    * JPA Entity 식별자 생성
-    * JPA @Embeddable
-    * JPA @Embeddable 다른 테이블에 매핑하기
-    * JPA 값 콜렉션 Map
-    * JPA 값 콜렉션 List
+    * JPA Entity CRUD, Mapping, 식별자 생성
+    * JPA @Embeddable, @Embeddable 다른 테이블에 매핑
+    * JPA 값 콜렉션 Set, List, Map, 주의사항
 
 ## Effective Java (이펙티브 자바)
 * 생성자 대신 정적 팩토리를 고려하기 (+ 자바 코드 예시)

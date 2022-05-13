@@ -267,6 +267,8 @@
     * JPA Entity CRUD, Mapping, 식별자 생성
     * JPA @Embeddable, @Embeddable 다른 테이블에 매핑
     * JPA 값 콜렉션 Set, List, Map, 주의사항
+    * JPA 영속 컨텍스트, 라이프 사이클
+    * JPA Entity 연관 관계
 
 ## Effective Java (이펙티브 자바)
 * 생성자 대신 정적 팩토리를 고려하기 (+ 자바 코드 예시)

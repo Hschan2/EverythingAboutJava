@@ -271,6 +271,7 @@
     * JPA Entity 연관 관계
     * JPA 영속성 전파와 연관 관계 고려
     * JPA Criteria
+    * JPA 기타 특징
 * 테스트 가능 구조 (+ 예시 코드)
 * Entity 간 연관 관계
     * 1:1 연관 관계

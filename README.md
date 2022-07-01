@@ -297,6 +297,7 @@
 - 이펙티브 자바: 자원 고정보다 의존 주입하기
 - Spring Data JPA
   - Spring Data JPA 시작 설정
+  - Repository 메소드 작성 규칙
 
 ## Effective Java (이펙티브 자바)
 

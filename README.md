@@ -289,7 +289,8 @@
   - JPA Criteria
   - JPA 기타 특징
   - JPQL
-  - JPA Specification 조건 ㄱ머색
+  - JPA Specification 조건 검색
+  - JPA 정렬 페이징
 - 테스트 가능 구조 (+ 예시 코드)
 - Entity 간 연관 관계
   - 1:1 연관 관계

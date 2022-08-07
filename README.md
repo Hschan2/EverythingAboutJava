@@ -301,6 +301,7 @@
 - Spring Data JPA
   - Spring Data JPA 시작 설정
   - Repository 메소드 작성 규칙
+- 지표(Metric) 기본
 
 ## Effective Java (이펙티브 자바)
 

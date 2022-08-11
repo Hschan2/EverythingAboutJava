@@ -303,6 +303,7 @@
   - Repository 메소드 작성 규칙
 - 지표(Metric) 기본
 - 의존 방향 생각하기
+- 자바, Record 타입
 
 ## Effective Java (이펙티브 자바)
 

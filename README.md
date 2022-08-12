@@ -304,6 +304,7 @@
 - 지표(Metric) 기본
 - 의존 방향 생각하기
 - 자바, Record 타입
+- 자바, Sealed와 Record로 데이터 표현
 
 ## Effective Java (이펙티브 자바)
 

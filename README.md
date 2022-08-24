@@ -131,6 +131,7 @@
 - 백기선의 프록시 패턴(Proxy)
 - 금융 IT 개발자의 Jwt Certification, 예외 처리, AOP
 - Unchecked Exception 발생에 관해 (백기선)
+- Generic과 메소드 활용
 
 ## JavaSpringFrameworkTest [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTest)
 
@@ -305,6 +306,7 @@
 - 의존 방향 생각하기
 - 자바, Record 타입
 - 자바, Sealed와 Record로 데이터 표현
+- 이야기: 신입개발자에게 필요한 자세
 
 ## Effective Java (이펙티브 자바)
 

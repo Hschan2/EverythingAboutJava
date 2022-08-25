@@ -39,6 +39,8 @@
   - 이해하기 힘든 이름
   - 함수 선언 변경하기
   - 변수 이름 바꾸기
+- 포코의 클린코드
+  - Else if와 Else 피하기
 
 ## AboutWeb_R [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java)
 

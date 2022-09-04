@@ -43,14 +43,14 @@ Java 마무리 정리
 - 자바스크립트 프로처럼 쓰는 법 by 엘리
 ```
 
-* 백기선의 리팩토링
+* [백기선의 리팩토링](https://github.com/Hschan2/EverythingAboutJava/tree/master/CleanCode/Refactoring)
 ```
 이해하기 힘든 이름
 함수 선언 변경하기
 변수 이름 바꾸기
 ```
 
-* 포코의 클린코드
+* [포코의 클린코드](https://github.com/Hschan2/EverythingAboutJava/tree/master/CleanCode/%ED%8F%AC%EC%BD%94%EC%9D%98%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C)
 ```
 Else if와 Else 피하기
 ```
@@ -131,7 +131,7 @@ Semantic Versioning
 Spring, SpringBoot에 대해
 ```
 
-* aboutSpring (스프링에 대해)
+* [aboutSpring (스프링에 대해)](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot/aboutSpring)
 ```
 SpringBoot
 Future Library
@@ -141,27 +141,27 @@ JPA 연관 관계
 IOC & PSA (기존 코드를 테스트 코드로 변경하는 방법)
 ```
 
-* startSpringBoot (스프링부트 시작하기)
+* [startSpringBoot (스프링부트 시작하기)](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot/startStringboot)
 ```
 StringBoot에 대해
 Thymeleaf 사용하기
 ```
 
-* Servlet vs Spring
+* [Servlet vs Spring](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot/servletandspring)
 ```
 Servlet과 Spring의 차이
 ```
 
 * Spring IoC/DI
-* Spring Security(마이크로소프트 개발자 백기선 동영상)
+* [Spring Security(마이크로소프트 개발자 백기선 동영상)](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot/demospringbootsecurity)
 ```
 demoSpringBootSecurity를 동영상 강의로 알기
 공식 문서 따라하기
 detailUser, EncodePassword
 ```
-* Spring Batch
-* Spring Webflux
-* Mybatis In SpringBoot
+* [Spring Batch](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot/SpringBatch)
+* [Spring Webflux](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot/SpringWebflux)
+* [Mybatis In SpringBoot](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot/mybatis%20From%20Springboot)
 * 백기선의 디자인 패턴
 ```
 백기선의 싱글톤 패턴(Singleton)
@@ -202,7 +202,7 @@ JDBC (Templete, ConnectPool)
 자바 스프링 프레임워크의 쿠키
 ```
 
-## Java·Web Study Project
+## [Java·Web Study Project](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java%C2%B7Web%20Project)
 
 * Java
 ```
@@ -299,7 +299,7 @@ Nginx
 상태 관리와 반응형 프로그래밍
 ```
 
-## 최범균 유튜브 [link](https://www.youtube.com/channel/UCqH_q8CLELh-Xa62u7LM-HQ/videos)
+## 최범균 개발 팁 [link](https://github.com/Hschan2/EverythingAboutJava/tree/master/Choibumkyun)
 
 ```
 변수 아끼기
@@ -351,7 +351,7 @@ N:1 연관 관계
 ```
 
 * 이펙티브 자바: 자원 고정보다 의존 주입하기
-* Spring Data JPA
+* [Spring Data JPA](https://github.com/Hschan2/EverythingAboutJava/tree/master/Choibumkyun/Spring%20Data%20JPA)
 ```
 Spring Data JPA 시작 설정
 Repository 메소드 작성 규칙
@@ -376,7 +376,7 @@ Repository 메소드 작성 규칙
 신입개발자에게 필요한 자세
 ```
 
-## Effective Java (이펙티브 자바)
+## [Effective Java (이펙티브 자바)](https://github.com/Hschan2/EverythingAboutJava/tree/master/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%EC%9E%90%EB%B0%94)
 
 ```
 생성자 대신 정적 팩토리를 고려하자 (자바 코드 예시 포함)
@@ -387,7 +387,7 @@ Repository 메소드 작성 규칙
 리플렉션
 ```
 
-## 웹 개발 Tips
+## [웹 개발 Tips](https://github.com/Hschan2/EverythingAboutJava)
 
 ```
 서버 개발을 시작하는 사람들을 위한 엘리의 Linux Tips By 유튜브 채널 엘리)
@@ -404,7 +404,7 @@ Finalizer 공격
 프론트엔드에서 컴포넌트
 ```
 
-## 면접 질문 정리 (자바)
+## [면접 질문 정리 (자바)](https://github.com/Hschan2/EverythingAboutJava/tree/master/Basic/%EB%A9%B4%EC%A0%91%20%EC%A7%88%EB%AC%B8%20%EC%A0%95%EB%A6%AC)
 
 ```
 자바의 특징

@@ -8,7 +8,7 @@
 <br/>
 
 |타이틀|폴더로 이동|
-|:---|:---:|
+|---|:---:|
 |**인프런 자바 기본 강좌**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Inflearn)|
 |**캡슐화**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Encapsulation)|
 |**TDDproject**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/TDDproject)|

@@ -1,6 +1,38 @@
 # 자바에 대한 모든 것
+자바의 기본적인 지식들을 학습합니다. 자바 기본 지식, 테스트 코드 개발, 클린코드를 공부합니다. 자바 언어를 활용한 스프링, 스프링 부트도 동시에 학습합니다.   
 
-## 인프런
+백기선, 최범균, 생활코딩의 개발 유튜브 영상을 시청하며 많은 경력을 가진 개발자들의 경험과 팁을 배웁니다.   
+
+배달의 민족이 운영하는 우아한테크에서의 수강생들이 학습한 내용을 공유한 영상을 보고 몰랐던 내용들을 학습합니다.   
+
+<br/>
+
+|**타이틀**|학습 폴더 이동|
+|:---:|:---:|
+|**인프런 자바 기본 강좌**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Inflearn)|
+|**캡슐화**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Encapsulation)|
+|**TDDproject**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/TDDproject)|
+|**클린코드**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/CleanCode)|
+|**백기선의 리팩토링**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/CleanCode/Refactoring)|
+|**포코의 클린코드**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/CleanCode/%ED%8F%AC%EC%BD%94%EC%9D%98%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C)|
+|**웹 개발 지식**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java)|
+|**생활코딩 자바 강의**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java/opentutorials)|
+|**Jenkins 배포 자동화 (AWS EC2, Docker) 체험**|[이동]()|
+|**스프링과 스프링부트**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot)|
+|**스프링 프레임워크**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTest)|
+|**자바 스프링 프레임워크(renew ver.) - 신입 프로그래머를 위한 강좌**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTestMVC)|
+|**스프링 프레임워크 세션**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/SpringFrameworkMVC_Session)|
+|**스프링 프레임워크 쿠키**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/SpringFrameworkMVC_Cookie)|
+|**자바, 웹 스터디**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java%C2%B7Web%20Project)|
+|**우아한테크 유튜브 테코톡**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/WoowaTech)|
+|**최범균 개발 팁**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Choibumkyun)|
+|**Effective Java (이펙티브 자바)**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%EC%9E%90%EB%B0%94)|
+|**웹 개발 팁**|[이동](#웹-개발-팁)|
+|**면접 질문 정리 (자바)**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Basic/%EB%A9%B4%EC%A0%91%20%EC%A7%88%EB%AC%B8%20%EC%A0%95%EB%A6%AC)|
+
+<br/>
+
+<!-- ## 인프런
 
 ### 자바 기본 [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/Inflearn)
 ```
@@ -13,9 +45,9 @@ Java 마무리 정리
 
 ```
 캡슐화에 대해
-```
+``` -->
 
-## TDDproject [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/TDDproject)
+<!-- ## TDDproject [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/TDDproject)
 
 ```
 테스트 주도 개발이란?
@@ -53,9 +85,9 @@ Java 마무리 정리
 * [포코의 클린코드](https://github.com/Hschan2/EverythingAboutJava/tree/master/CleanCode/%ED%8F%AC%EC%BD%94%EC%9D%98%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C)
 ```
 Else if와 Else 피하기
-```
+``` -->
 
-## AboutWeb_R [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java)
+<!-- ## AboutWeb_R [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/AboutWeb_R/src/com/java)
 
 ```
 Web에서 요청과 응답
@@ -108,9 +140,9 @@ Semantic Versioning
 ```
 자바에서의 인터페이스
 자바에서의 예외 처리
-```
+``` -->
 
-### Jenkins 배포 자동화 (AWS EC2, Docker)
+<!-- ### Jenkins 배포 자동화 (AWS EC2, Docker)
 
 ```
 1. AWS에서 EC2 instance 4G RAM 생성
@@ -170,9 +202,9 @@ detailUser, EncodePassword
 
 * 금융 IT 개발자의 Jwt Certification, 예외 처리, AOP
 * 백기선의 Unchecked Exception 발생에 대한 것
-* Generic과 메소드 활용
+* Generic과 메소드 활용 -->
 
-## JavaSpringFrameworkTest [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTest)
+<!-- ## JavaSpringFrameworkTest [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/JavaSpringFrameworkTest)
 
 ```
 SpringFramework
@@ -187,9 +219,9 @@ Bean Container의 LifeCycle
 
 ```
 자바 스프링 프레임워크(renew ver.) - 신입 프로그래머를 위한 강좌
-```
+``` -->
 
-## SpringFrameworkMVC_Session [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/SpringFrameworkMVC_Session)
+<!-- ## SpringFrameworkMVC_Session [Link](https://github.com/Hschan2/EverythingAboutJava/tree/master/SpringFrameworkMVC_Session)
 
 ```
 자바 스프링 프레임워크의 세션
@@ -200,9 +232,9 @@ JDBC (Templete, ConnectPool)
 
 ```
 자바 스프링 프레임워크의 쿠키
-```
+``` -->
 
-## [Java·Web Study Project](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java%C2%B7Web%20Project)
+<!-- ## [Java·Web Study Project](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java%C2%B7Web%20Project)
 
 * Java
 ```
@@ -385,9 +417,9 @@ Repository 메소드 작성 규칙
 서비스 제공자 프레임워크
 플라이웨이트 패턴
 리플렉션
-```
+``` -->
 
-## [웹 개발 Tips](https://github.com/Hschan2/EverythingAboutJava)
+## 웹 개발 팁
 
 ```
 서버 개발을 시작하는 사람들을 위한 엘리의 Linux Tips By 유튜브 채널 엘리)
@@ -404,7 +436,7 @@ Finalizer 공격
 프론트엔드에서 컴포넌트
 ```
 
-## [면접 질문 정리 (자바)](https://github.com/Hschan2/EverythingAboutJava/tree/master/Basic/%EB%A9%B4%EC%A0%91%20%EC%A7%88%EB%AC%B8%20%EC%A0%95%EB%A6%AC)
+<!-- ## 면접 질문 정리 (자바)
 
 ```
 자바의 특징
@@ -413,4 +445,4 @@ MVC 설명
 의존성 주입 특징
 프로그래밍 방법론 설명
 프론트엔드 언어 특징 (React)
-```
+``` -->

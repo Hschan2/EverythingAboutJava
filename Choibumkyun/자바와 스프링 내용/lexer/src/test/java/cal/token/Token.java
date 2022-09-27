@@ -31,4 +31,12 @@ public class Token {
                 ", literal='" + literal + '\'' +
                 '}';
     }
+
+    public TokenType getType() {
+        return type;
+    }
+
+    public String getLiteral() {
+        return literal;
+    }
 }

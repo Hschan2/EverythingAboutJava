@@ -9,7 +9,7 @@
 
 ## 목록
 |타이틀|폴더로 이동|
-|:---:|---|
+|---|:---:|
 |**도서 내용 정리**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Choibumkyun/%EB%8F%84%EC%84%9C%20%EB%82%B4%EC%9A%A9%20%EC%A0%95%EB%A6%AC)|
 |**리팩토링과 성능 향상**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Choibumkyun/%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81%EA%B3%BC%20%EC%84%B1%EB%8A%A5%20%ED%96%A5%EC%83%81)|
 |**최범균 이야기**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Choibumkyun/%EC%9D%B4%EC%95%BC%EA%B8%B0)|

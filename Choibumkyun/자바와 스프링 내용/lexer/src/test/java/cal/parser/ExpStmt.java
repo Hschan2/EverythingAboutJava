@@ -10,4 +10,9 @@ public class ExpStmt implements Stmt {
     public Exp getExp() {
         return exp;
     }
+
+    @Override
+    public String DebugString() {
+        return exp.DebugString();
+    }
 }

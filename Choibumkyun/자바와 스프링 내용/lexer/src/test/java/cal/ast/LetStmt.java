@@ -19,4 +19,9 @@ public class LetStmt implements Stmt {
     public Exp getExp() {
         return exp;
     }
+
+    @Override
+    public String DebugString() {
+        return String.format("(%s = %s)", idExp.DebugString(), exp.DebugString());
+    }
 }

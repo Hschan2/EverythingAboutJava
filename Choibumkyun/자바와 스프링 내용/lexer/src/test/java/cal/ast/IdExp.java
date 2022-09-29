@@ -12,4 +12,9 @@ public class IdExp implements Exp {
     public String getId() {
         return id;
     }
+
+    @Override
+    public String DebugString() {
+        return id;
+    }
 }

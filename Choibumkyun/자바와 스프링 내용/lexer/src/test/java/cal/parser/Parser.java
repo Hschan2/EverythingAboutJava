@@ -2,6 +2,8 @@ package cal.parser;
 
 import cal.ast.IdExp;
 import cal.ast.LetStmt;
+import cal.ast.PreFixOpExp;
+import cal.ast.inFixOpExp;
 import cal.lexer.Lexer;
 import cal.token.Token;
 import cal.token.TokenType;
@@ -67,7 +69,7 @@ public class Parser {
             return null;
         }
         nextToken();
-        Exp exp = parseExp();
+        Exp exp = parseExp(0);
         if (exp == null) {
             return null;
         }
@@ -88,12 +90,12 @@ public class Parser {
 //    다음 exp 파싱
     private Stmt parseExpStmt() {
         Exp exp = null;
-        exp = parseExp();
+        exp = parseExp(0);
         return new ExpStmt(exp);
     }
 
 //    number, id 일 경우 파싱
-    private Exp parseExp() {
+    private Exp parseExp(int prec) {
         Exp exp = null;
         if (curToken.getType() == TokenType.NUMBER) {
             exp = new NumberExp(curToken.getLiteral());
@@ -101,6 +103,62 @@ public class Parser {
         if (curToken.getType() == TokenType.ID) {
             exp = new IdExp(curToken.getLiteral());
         }
+        if (curToken.getType() == TokenType.LPAREN) {
+            exp = parseParan();
+        }
+        if (curToken.getType() == TokenType.MINUS) {
+            exp = parsePreFixOp();
+        }
+
+//        중위 연산자가 올 경우, precEdence는 ()가 들어갔을 때 우선순위를 결정하기 위해
+        while (inFixOp(peekToken.getType()) && prec < precEdence(peekToken.getType())) {
+            nextToken();
+            String operator = curToken.getLiteral();
+            int curPrec = precEdence(curToken.getType());
+            nextToken();
+            Exp right = parseExp(curPrec);
+            exp = new inFixOpExp(operator, exp, right);
+        }
         return exp;
+    }
+
+    private Exp parsePreFixOp() {
+        String operator = curToken.getLiteral();
+        nextToken();
+        Exp exp = parseExp(5);
+        if (exp == null) {
+            return null;
+        }
+        return new PreFixOpExp(operator, exp);
+    }
+
+    private Exp parseParan() {
+        nextToken();
+        Exp exp = parseExp(0);
+        if (exp == null) {
+            return null;
+        }
+        if (!expectPeek(TokenType.RPAREN)) {
+            return null;
+        }
+
+        return exp;
+    }
+
+    private int precEdence(TokenType type) {
+        return switch (type) {
+            case PLUS, MINUS -> 1;
+            case MULTIPLY, DIVIDE -> 3;
+            case POW -> 7;
+            default -> 0;
+        };
+    }
+
+    private boolean inFixOp(TokenType type) {
+        return type == TokenType.PLUS ||
+                type == TokenType.MINUS ||
+                type == TokenType.MULTIPLY ||
+                type == TokenType.DIVIDE ||
+                type == TokenType.POW;
     }
 }

@@ -2,6 +2,8 @@ package cal.parser;
 
 import cal.ast.IdExp;
 import cal.ast.LetStmt;
+import cal.ast.PreFixOpExp;
+import cal.ast.inFixOpExp;
 import cal.lexer.Lexer;
 import org.junit.jupiter.api.Test;
 
@@ -59,7 +61,62 @@ public class parserTest {
         assertNumberExp(letStmt.getExp(), 10.0);
     }
 
-//    ID 값 상태 파싱 확인
+//    중위 연산자 포함 테스트
+    @Test
+    void inFixOp() {
+        String input = "1 + 10";
+        Lexer lexer = new Lexer(input);
+        Parser parser = new Parser(lexer);
+        Program program = parser.parserProgram();
+        Stmt[] stmts = program.getState();
+        ExpStmt expStmt = (ExpStmt) stmts[0];
+        Exp exp = expStmt.getExp();
+        assertThat(exp).isInstanceOf(inFixOpExp.class);
+        inFixOpExp inExp = (inFixOpExp) exp;
+        assertThat(inExp.getOperator()).isEqualTo("+");
+        assertNumberExp(inExp.getLeft(), 1.0);
+        assertNumberExp(inExp.getLeft(), 10.0);
+    }
+
+    @Test
+    void preFixOp() {
+        String input = "-1";
+        Lexer lexer = new Lexer(input);
+        Parser parser = new Parser(lexer);
+        Program program = parser.parserProgram();
+        Stmt[] stmts = program.getState();
+        ExpStmt expStmt = (ExpStmt) stmts[0];
+        Exp exp = expStmt.getExp();
+        assertThat(exp).isInstanceOf(PreFixOpExp.class);
+        PreFixOpExp inExp = (PreFixOpExp) exp;
+        assertThat(inExp.getOperator()).isEqualTo("-");
+        assertNumberExp(inExp.getExp(), 1.0);
+    }
+
+//    중위 연산자 테스트를 마친 모든 프로그램 테스트
+    @Test
+    void program() {
+        assertProgram("1 + 10", "(1 + 10)");
+        assertProgram("1 + 10 * 5", "(1 + (10 * 5))");
+        assertProgram("1 + 2 + 3", "((1 + 2) + 3)");
+        assertProgram("(1 + 2) * 3", "((1 + 2) * 3)");
+        assertProgram("(1 + 2) * 3 ** 2", "((1 + 2) * (3 ** 2))");
+        assertProgram("-1 * 3", "((-1) * 3)");
+        assertProgram("let a = 10\na * (3 + 5)", "(a = 10)", "(a * (3 + 5))");
+    }
+
+//    program 테스트를 위한 상태 parser
+    private void assertProgram(String input, String ...expectedStmt) {
+        Lexer lexer = new Lexer(input);
+        Parser parser = new Parser(lexer);
+        Program program = parser.parserProgram();
+        Stmt[] stmts = program.getState();
+        for (int i = 0; i < expectedStmt.length; i++) {
+            assertThat(stmts[i].DebugString()).isEqualTo(expectedStmt[i]);
+        }
+    }
+
+    //    ID 값 상태 파싱 확인
     private static void assertStmtWithId(Stmt stmt, String id) {
         assertThat(stmt).isInstanceOf(ExpStmt.class);
         ExpStmt expStmt = (ExpStmt) stmt;

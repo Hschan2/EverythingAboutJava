@@ -1,13 +1,22 @@
 package cal.parser;
 
 public class Program implements Node {
-    private Stmt[] state;
+    private Stmt[] stmts;
 
-    public Program(Stmt[] state) {
-        this.state = state;
+    public Program(Stmt[] stmts) {
+        this.stmts = stmts;
     }
 
     public Stmt[] getState() {
-        return state;
+        return stmts;
+    }
+
+    @Override
+    public String DebugString() {
+        StringBuilder sb = new StringBuilder();
+        for (Stmt stmt : stmts) {
+            sb.append(stmt.DebugString());
+        }
+        return sb.toString();
     }
 }

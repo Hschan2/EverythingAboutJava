@@ -10,4 +10,9 @@ public class NumberExp implements Exp {
     public double valueAsDouble() {
         return Double.parseDouble(value);
     }
+
+    @Override
+    public String DebugString() {
+        return value;
+    }
 }

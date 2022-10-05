@@ -15,4 +15,8 @@ public class NumberExp implements Exp {
     public String DebugString() {
         return value;
     }
+
+    public String  getValue() {
+        return value;
+    }
 }

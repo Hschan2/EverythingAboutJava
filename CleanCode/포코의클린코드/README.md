@@ -10,3 +10,5 @@
 |**타입 검사**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/CleanCode/%ED%8F%AC%EC%BD%94%EC%9D%98%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C/%ED%83%80%EC%9E%85%20%EA%B2%80%EC%82%AC.md)|
 |**== 연산자 줄이기**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/CleanCode/%ED%8F%AC%EC%BD%94%EC%9D%98%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C/EQEQ%20%EC%A4%84%EC%9D%B4%EA%B8%B0.md)|
 |**isNaN보다 Number.isNaN**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/CleanCode/%ED%8F%AC%EC%BD%94%EC%9D%98%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C/IsNaN().md)|
+|**삼항 연산자 제대로 다루기**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/CleanCode/%ED%8F%AC%EC%BD%94%EC%9D%98%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C/%EC%82%BC%ED%95%AD%EC%97%B0%EC%82%B0%EC%9E%90%20%EB%8B%A4%EB%A3%A8%EA%B8%B0.md)|
+|**경계 다루기 (코드 컨벤션)**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/CleanCode/%ED%8F%AC%EC%BD%94%EC%9D%98%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C/%EA%B2%BD%EA%B3%84%20%EB%8B%A4%EB%A3%A8%EA%B8%B0(%EC%BD%94%EB%93%9C%20%EC%BB%A8%EB%B2%A4%EC%85%98).md)|

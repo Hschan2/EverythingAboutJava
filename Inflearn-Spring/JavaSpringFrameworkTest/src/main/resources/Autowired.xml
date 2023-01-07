@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+
+	<bean id="wordDao" class="Day5.WordDao">
+		<!-- <qualifier value = "usedDao"/> -->
+	</bean>
+	<bean id="registerService" class="Day5.WordRegisterService" /> <!-- registerService => WordRegisterService.java를 찾아가라 -->
+	<bean id="searchService" class="Day5.WordSearchService" /> <!-- searchService => WordSearchService.java를 찾아가라 -->
+</beans>

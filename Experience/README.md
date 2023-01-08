@@ -6,4 +6,4 @@
 ## 목록
 |타이틀|폴더로 이동|
 |---|:---:|
-|**면접 질문 정리**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Basic/%EB%A9%B4%EC%A0%91%20%EC%A7%88%EB%AC%B8%20%EC%A0%95%EB%A6%AC)|
+|**면접 질문 정리**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Experience/%EB%A9%B4%EC%A0%91%20%EC%A7%88%EB%AC%B8%20%EC%A0%95%EB%A6%AC)|

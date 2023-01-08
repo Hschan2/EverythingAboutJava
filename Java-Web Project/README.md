@@ -4,10 +4,11 @@
 <br/>
 
 ## 목록
+
 |타이틀|폴더로 이동|
-|:---:|---|
-|**계산기**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java%C2%B7Web%20Project/Calustor)|
-|**로또 게임**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java%C2%B7Web%20Project/Lotto)|
-|**새로운 CSS 기능**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java%C2%B7Web%20Project/New%20CSS%20Function)|
-|**새로운 자바스크립트 기능**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java%C2%B7Web%20Project/New%20Javascript%20Function)|
-|**스타일적인 웹**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java%C2%B7Web%20Project/StyleInWeb/CardUI)|
+|---|:---:|
+|**계산기**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java-Web%20Project/Calustor)|
+|**로또 게임**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java-Web%20Project/Lotto)|
+|**새로운 CSS 기능**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java-Web%20Project/New%20CSS%20Function)|
+|**새로운 자바스크립트 기능**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java-Web%20Project/New%20Javascript%20Function)|
+|**스타일 인 웹**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java-Web%20Project/StyleInWeb)|

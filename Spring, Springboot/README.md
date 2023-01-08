@@ -7,7 +7,7 @@
 
 ## 목록
 |타이틀|폴더로 이동|
-|:---:|---|
+|---|:---:|
 |**스프링이란?**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot/aboutSpring)|
 |**JWT 인증**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot/jwtcertification)|
 |**MyBatis**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Spring%2C%20Springboot/mybatis%20From%20Springboot)|
@@ -25,7 +25,7 @@
 
 ## 스프링 간단 지식
 |타이틀|폴더로 이동|
-|:---:|---|
+|---|:---:|
 |**Generic과 가독성**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/Spring%2C%20Springboot/Generic%EA%B3%BC%20%EA%B0%80%EB%8F%85%EC%84%B1.md)|
 |**JPA**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/Spring%2C%20Springboot/JPA.md)|
 |**언체크드 예외 발생 시**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/Spring%2C%20Springboot/%EC%96%B8%EC%B2%B4%ED%81%AC%EB%93%9C%20%EC%98%88%EC%99%B8%20%EB%B0%9C%EC%83%9D%20%EC%8B%9C.md)|

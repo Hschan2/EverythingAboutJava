@@ -6,6 +6,6 @@
 ## 목록
 |타이틀|파일로 이동|
 |:---:|---|
-|**자바 예외**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/AboutWeb_R/src/Web/opentutorials/ExceptionMain.java)|
-|**자바 상속**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/AboutWeb_R/src/Web/opentutorials/ExtentsMain.java)|
-|**자바 인터페이스**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/AboutWeb_R/src/Web/opentutorials/InterfaceMain.java)|
+|**자바 예외**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/Java-Web%20Knowledge/src/Web/opentutorials/ExceptionMain.java)|
+|**자바 상속**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/Java-Web%20Knowledge/src/Web/opentutorials/ExtentsMain.java)|
+|**자바 인터페이스**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/Java-Web%20Knowledge/src/Web/opentutorials/InterfaceMain.java)|

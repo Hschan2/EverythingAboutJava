@@ -5,7 +5,7 @@
 
 ## 목록
 |타이틀|파일로 이동|
-|:---:|---|
+|---|:---:|
 |**AOP**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java-Web%20Knowledge/src/com/java/AOP)|
 |**ARP Protocol**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java-Web%20Knowledge/src/com/java/ARP_Protocol)|
 |**Bandwidth**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java-Web%20Knowledge/src/com/java/Bandwidth)|
@@ -54,6 +54,6 @@
 
 ## 웹 지식 목록
 |타이틀|폴더(파일)로 이동|
-|:---:|---|
+|---|:---:|
 |**Semantic Versioning**|[이동](https://github.com/Hschan2/EverythingAboutJava/blob/master/Java-Web%20Knowledge/src/Web/Semantic%20Versioning.md)|
 |**생활코딩 자바**|[이동](https://github.com/Hschan2/EverythingAboutJava/tree/master/Java-Web%20Knowledge/src/Web/opentutorials)|

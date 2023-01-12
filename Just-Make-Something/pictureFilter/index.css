@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    /* 블러 */
+    filter: blur(2px);
+    /* 밝기 (0 ~ 200 추천) */
+    filter: brightness(120%);
+    /* 대비 (0 ~ 200 추천) */
+    filter: contrast(80%);
+    /* 그림자 */
+    filter: drop-shadow(3px 3px 5px gray);
+    /* 흑백 (0 ~ 100) */
+    filter: grayscale(20%);
+    /* 색조 회전 */
+    filter: hue-rotate(10deg);
+    /* 색 반전 */
+    filter: invert(10%);
+    /* 투명도 (0 ~ 100) */
+    filter: opacity(80%);
+    /* 채도 (0 ~ ) */
+    filter: saturate(120%);
+    /* 따뜻한 흑백 (0 ~ 100) */
+    filter: sepia(10%);
+}

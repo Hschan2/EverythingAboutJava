@@ -1,6 +1,12 @@
 import React from 'react'
+import '../App.css';
 
 function Slider({min, max, value, handleChange}) {
+    const sliderValue = Number(((value - min) * 100) / (max - min));
+    const valueStyle = {
+        left: `calc(${sliderValue}% + (${8 - sliderValue * 1.145}px))`
+    };
+
   return (
       <div className='slider-container'>
           <input
@@ -11,7 +17,7 @@ function Slider({min, max, value, handleChange}) {
               value={value}
               onChange={handleChange}
           />
-          <output>{value}</output>
+          <output className='value' style={valueStyle}>{value}</output>
       </div>
   )
 }

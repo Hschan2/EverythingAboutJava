@@ -11,6 +11,7 @@ function Slider({min, max, value, handleChange}) {
               value={value}
               onChange={handleChange}
           />
+          <output>{value}</output>
       </div>
   )
 }

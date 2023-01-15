@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Main from './component/Main';
 import SidebarItem from './component/SidebarItem';
 import Slider from './component/Slider';
 import DEFAULT_OPTIONS from './constant/options';
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className='container'>
+      {/*
       <div className='main-image' style={getImageStyle()} />
       <div className='sidebar'>
         {options.map((option, index) => {
@@ -47,6 +49,8 @@ function App() {
         value={selectedOption.value}
         handleChange={handleSliderChange}
       />
+      */}
+      <Main />
     </div>
   );
 }

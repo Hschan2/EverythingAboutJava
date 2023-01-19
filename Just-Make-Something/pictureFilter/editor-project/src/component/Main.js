@@ -3,6 +3,8 @@ import '../style/main.scss'
 import { GrRotateLeft, GrRotateRight } from 'react-icons/gr'
 import { CgMergeVertical, CgMergeHorizontal } from 'react-icons/cg'
 import { IoMdUndo, IoMdRedo, IoIosImage } from 'react-icons/io'
+import ReactCrop from 'react-image-crop'
+import 'react-image-crop/dist/ReactCrop.css'
 
 function Main() {
     const filterElement = [
@@ -41,6 +43,8 @@ function Main() {
             maxValue: 200,
         }
     )
+    const [crop, setCrop] = useState('')
+    const [details, setDetails] = useState('')
     const [state, setState] = useState({
         image: '',
         brightness: 100,
@@ -72,6 +76,53 @@ function Main() {
             reader.readAsDataURL(e.target.files[0])
         }
     }
+    const saveImage = (e) => {
+        const canvas = document.createElement('canvas')
+        canvas.width = details.width
+        canvas.height = details.height
+        const ctx = canvas.getContext('2d')
+
+        ctx.filter = `brightness(${state.brightness}%) grayscale(${state.grayscale}%) sepia(${state.sepia}%) saturate(${state.saturate}%) contrast(${state.contrast}%) hue-rotate(${state.hueRotate}deg) blur(${state.blur}px)`
+        ctx.translate(canvas.width / 2, canvas.height / 2)
+        ctx.rotate(state.rotate * Math.PI / 180)
+        ctx.scale(state.vertical, state.horizontal)
+        ctx.drawImage(
+            details,
+            -canvas.width / 2,
+            -canvas.height / 2,
+            canvas.width,
+            canvas.height
+        )
+        const link = document.createElement('a')
+        link.download = 'image_edit.jpg'
+        link.href = canvas.toDataURL()
+        link.click()
+    }
+    const imageCrop = (e) => {
+        const canvas = document.createElement('canvas')
+        const scaleX = details.naturalWidth / details.width
+        const scaleY = details.naturalHeight / details.height
+        canvas.width = crop.width
+        canvas.height = crop.height
+        const ctx = canvas.getContext('2d')
+
+        ctx.drawImage(
+            details,
+            crop.x * scaleX,
+            crop.y * scaleY,
+            crop.width * scaleX,
+            crop.height * scaleY,
+            0,
+            0,
+            crop.width,
+            crop.height
+        )
+        const base64Url = canvas.toDataURL('image/jpg')
+        setState({
+            ...state,
+            image: base64Url
+        })
+    }
     const leftRotate = (e) => {
         setState({
             ...state,
@@ -82,6 +133,18 @@ function Main() {
         setState({
             ...state,
             rotate: state.rotate + 90
+        })
+    }
+    const verticalFlip = (e) => {
+        setState({
+            ...state,
+            vertical: state.vertical === 1 ? -1 : 1
+        })
+    }
+    const horizontalFlip = (e) => {
+        setState({
+            ...state,
+            horizontal: state.horizontal === 1 ? -1 : 1
         })
     }
 
@@ -114,23 +177,23 @@ function Main() {
                                 <div className='icon'>
                                     <div onClick={leftRotate}><GrRotateLeft /></div>
                                     <div onClick={rightRotate}><GrRotateRight /></div>
-                                    <div><CgMergeVertical /></div>
-                                    <div><CgMergeHorizontal /></div>
+                                    <div onClick={verticalFlip}><CgMergeVertical /></div>
+                                    <div onClick={horizontalFlip}><CgMergeHorizontal /></div>
                                 </div>
                             </div>
                         </div>
                         <div className='reset'>
                             <button>Reset</button>
-                            <button className='save'>Save Image</button>
+                            <button onClick={saveImage} className='save'>Save Image</button>
                         </div>
                     </div>
                     <div className='image_section'>
                         <div className='image'>
                             {
-                                state.image ? <img style={{
+                                state.image ? <ReactCrop crop={crop} onChange={c => setCrop(c)}><img onLoad={(e) => setDetails(e.currentTarget)} style={{
                                     filter: `brightness(${state.brightness}%) grayscale(${state.grayscale}%) sepia(${state.sepia}%) saturate(${state.saturate}%) contrast(${state.contrast}%) hue-rotate(${state.hueRotate}deg) blur(${state.blur}px)`,
                                     transform: `rotate(${state.rotate}deg) scale(${state.vertical}, ${state.horizontal})`
-                                }} src={state.image} alt='' /> :
+                                }} src={state.image} alt='' /></ReactCrop> :
                                     <label htmlFor='choose'>
                                         <IoIosImage />
                                         <span>Choose Image</span>
@@ -140,7 +203,7 @@ function Main() {
                         <div className='image_select'>
                             <button className='undo'><IoMdUndo /></button>
                             <button className='redo'><IoMdRedo /></button>
-                            <button className='crop'>Crop Image</button>
+                            {crop && <button onClick={imageCrop} className='crop'>Crop Image</button>}
                             <label htmlFor='choose'>Choose Image</label>
                             <input type='file' id='choose' onChange={imageHandle} />
                         </div>

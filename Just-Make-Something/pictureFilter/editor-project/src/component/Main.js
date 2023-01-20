@@ -5,6 +5,7 @@ import { CgMergeVertical, CgMergeHorizontal } from 'react-icons/cg'
 import { IoMdUndo, IoMdRedo, IoIosImage } from 'react-icons/io'
 import ReactCrop from 'react-image-crop'
 import 'react-image-crop/dist/ReactCrop.css'
+import storeData from './LinkedList'
 
 function Main() {
     const filterElement = [
@@ -72,6 +73,21 @@ function Main() {
                     ...state,
                     image: reader.result
                 })
+
+                const stateData = {
+                    image: reader.result,
+                    brightness: 100,
+                    grayscale: 0,
+                    sepia: 0,
+                    saturate: 100,
+                    contrast: 100,
+                    hueRotate: 0,
+                    blur: 0,
+                    rotate: 0,
+                    vertical: 1,
+                    horizontal: 1
+                }
+                storeData.insert(stateData)
             }
             reader.readAsDataURL(e.target.files[0])
         }
@@ -128,24 +144,52 @@ function Main() {
             ...state,
             rotate: state.rotate - 90
         })
+
+        const stateData = state
+        stateData.rotate = state.rotate - 90
+        storeData.insert(stateData)
     }
     const rightRotate = (e) => {
         setState({
             ...state,
             rotate: state.rotate + 90
         })
+
+        const stateData = state
+        stateData.rotate = state.rotate + 90
+        storeData.insert(stateData)
     }
     const verticalFlip = (e) => {
         setState({
             ...state,
             vertical: state.vertical === 1 ? -1 : 1
         })
+
+        const stateData = state
+        stateData.vertical = state.vertical === 1 ? -1 : 1
+        storeData.insert(stateData)
     }
     const horizontalFlip = (e) => {
         setState({
             ...state,
             horizontal: state.horizontal === 1 ? -1 : 1
         })
+
+        const stateData = state
+        stateData.horizontal = state.horizontal === 1 ? -1 : 1
+        storeData.insert(stateData)
+    }
+    const redo = () => {
+        const data = storeData.redoEdit()
+        if (data) {
+            setState(data)
+        }
+    }
+    const undo = () => {
+        const data = storeData.undoEdit()
+        if (data) {
+            setState(data)
+        }
     }
 
     return (
@@ -201,8 +245,8 @@ function Main() {
                             }
                         </div>
                         <div className='image_select'>
-                            <button className='undo'><IoMdUndo /></button>
-                            <button className='redo'><IoMdRedo /></button>
+                            <button onClick={undo} className='undo'><IoMdUndo /></button>
+                            <button onClick={redo} className='redo'><IoMdRedo /></button>
                             {crop && <button onClick={imageCrop} className='crop'>Crop Image</button>}
                             <label htmlFor='choose'>Choose Image</label>
                             <input type='file' id='choose' onChange={imageHandle} />

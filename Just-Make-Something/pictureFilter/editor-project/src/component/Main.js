@@ -205,14 +205,14 @@ function Main() {
                                 <span></span>
                                 <div className='filter_key'>
                                     {filterElement.map((v, i) => 
-                                        <button className={property.name === v.name ? 'active' : ''} onClick={() => setProperty(v)} key={i}>{v.name}</button>
+                                        <button className={property.name === v.name ? 'active' : 'onButton'} onClick={() => setProperty(v)} key={i}>{v.name}</button>
                                     )}
                                 </div>
                             </div>
                             <div className='filter_slider'>
                                 <div className='label_bar'>
-                                    <label htmlFor='range'>Rotate</label>
-                                    <span>100%</span>
+                                    <label htmlFor='range'>Value</label>
+                                    <span>{state[property.name]}%</span>
                                 </div>
                                 <input name={property.name} onChange={inputHandle} value={state[property.name]} max={property.maxValue} type='range' />
                             </div>

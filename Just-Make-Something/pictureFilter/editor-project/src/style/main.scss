@@ -16,7 +16,7 @@
             padding-bottom: 15px;
             h2 {
                 text-transform: uppercase;
-                color: #e52fcf;
+                color: #537BC3;
             }
         }
         .card_body {
@@ -26,11 +26,11 @@
                 .reset {
                     margin-top: 20px;
                     .save {
-                        background-color: #e335f3 !important;
+                        background-color: #537BC3 !important;
                         margin-left: 5px;
                     }
                     button {
-                        background-color: rgb(242, 53, 85);
+                        background-color: #537BC3;
                         padding: 8px;
                         border-radius: 3px;
                         outline: none;
@@ -59,7 +59,7 @@
                         grid-template-columns: repeat(2, 1fr);
                         grid-gap: 8px;
                         button.active {
-                            background-color: rgb(84, 93, 216);
+                            background-color: #537BC3;
                             color: #fff;
                         }
                         button {
@@ -69,6 +69,9 @@
                             cursor: pointer;
                             color: #404040;
                             text-transform: capitalize;
+                        }
+                        .onButton:hover {
+                            border: 1px solid #537BC3;
                         }
                     }
                     .filter_slider {
@@ -85,6 +88,7 @@
                         }
                         input {
                             width: 100%;
+                            accent-color: #537BC3;
                         }
                     }
                     .rotate {
@@ -106,6 +110,10 @@
                                 align-items: center;
                                 cursor: pointer;
                             }
+                            div:hover {
+                                background-color: #537BC3;
+                                color: #fff;
+                            }
                         }
                     }
                 }
@@ -124,7 +132,7 @@
                     overflow: hidden;
                     img {
                         object-fit: scale-down;
-                        transition: all .2s;
+                        transition: all .1s;
                         width: 100%;
                         height: 100%;
                     }
@@ -166,18 +174,18 @@
                         font-size: 15px;
                     }
                     .redo, .undo {
-                        background-color: #4a55f3;
+                        background-color: #537BC3;
                         margin-left: 5px;
                         color: #fff;
                         padding: 5px 10px;
                         font-size: 18px;
                     }
                     label {
-                        background-color: #115811;
+                        background-color: #537BC3;
                         margin-left: 5px;
                     }
                     .crop {
-                        background-color: #8e33b7;
+                        background-color: #537BC3;
                         margin-left: 5px;
                     }
                 }

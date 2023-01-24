@@ -35,7 +35,7 @@ function Main() {
         },
         {
             name: 'blur',
-            maxValue: 20,
+            maxValue: 10,
         }
     ]
     const [property, setProperty] = useState(
@@ -191,6 +191,27 @@ function Main() {
             setState(data)
         }
     }
+    const reset = (e) => {
+        setState({
+            ...state,
+            brightness: 100,
+            grayscale: 0,
+            sepia: 0,
+            saturate: 100,
+            contrast: 100,
+            hueRotate: 0,
+            blur: 0,
+            rotate: 0,
+            vertical: 1,
+            horizontal: 1
+        })
+        const canvas = document.createElement('canvas')
+        const ctx = canvas.getContext('2d')
+
+        ctx.drawImage(
+            details,
+        )
+    }
 
     return (
         <div className='image_editor'>
@@ -227,7 +248,7 @@ function Main() {
                             </div>
                         </div>
                         <div className='reset'>
-                            <button>Reset</button>
+                            <button onClick={reset}>Reset</button>
                             <button onClick={saveImage} className='save'>Save Image</button>
                         </div>
                     </div>

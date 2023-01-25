@@ -36,6 +36,10 @@ function Main() {
         {
             name: 'blur',
             maxValue: 10,
+        },
+        {
+            name: 'scale',
+            maxValue: 5,
         }
     ]
     const [property, setProperty] = useState(
@@ -55,9 +59,13 @@ function Main() {
         contrast: 100,
         hueRotate: 0,
         blur: 0,
+        scale: 1,
         rotate: 0,
         vertical: 1,
         horizontal: 1
+    })
+    const [uploadedImage, setUploadedImage] = useState({
+        image: '',
     })
     const inputHandle = (e) => {
         setState({
@@ -138,6 +146,9 @@ function Main() {
             ...state,
             image: base64Url
         })
+        setCrop({
+            disabled: false
+        })
     }
     const leftRotate = (e) => {
         setState({
@@ -193,7 +204,6 @@ function Main() {
     }
     const reset = (e) => {
         setState({
-            ...state,
             brightness: 100,
             grayscale: 0,
             sepia: 0,
@@ -201,16 +211,12 @@ function Main() {
             contrast: 100,
             hueRotate: 0,
             blur: 0,
+            scale: 1,
             rotate: 0,
             vertical: 1,
-            horizontal: 1
+            horizontal: 1,
+            image: details
         })
-        const canvas = document.createElement('canvas')
-        const ctx = canvas.getContext('2d')
-
-        ctx.drawImage(
-            details,
-        )
     }
 
     return (
@@ -257,7 +263,7 @@ function Main() {
                             {
                                 state.image ? <ReactCrop crop={crop} onChange={c => setCrop(c)}><img onLoad={(e) => setDetails(e.currentTarget)} style={{
                                     filter: `brightness(${state.brightness}%) grayscale(${state.grayscale}%) sepia(${state.sepia}%) saturate(${state.saturate}%) contrast(${state.contrast}%) hue-rotate(${state.hueRotate}deg) blur(${state.blur}px)`,
-                                    transform: `rotate(${state.rotate}deg) scale(${state.vertical}, ${state.horizontal})`
+                                    transform: `rotate(${state.rotate}deg) scale(${state.vertical}, ${state.horizontal}) scale(${state.scale})`
                                 }} src={state.image} alt='' /></ReactCrop> :
                                     <label htmlFor='choose'>
                                         <IoIosImage />

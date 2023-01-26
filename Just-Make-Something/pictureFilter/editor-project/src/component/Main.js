@@ -81,6 +81,9 @@ function Main() {
                     ...state,
                     image: reader.result
                 })
+                setUploadedImage({
+                    image: reader.result
+                })
 
                 const stateData = {
                     image: reader.result,
@@ -204,6 +207,7 @@ function Main() {
     }
     const reset = (e) => {
         setState({
+            image: uploadedImage.image,
             brightness: 100,
             grayscale: 0,
             sepia: 0,
@@ -215,7 +219,6 @@ function Main() {
             rotate: 0,
             vertical: 1,
             horizontal: 1,
-            image: details
         })
     }
 
@@ -241,7 +244,7 @@ function Main() {
                                     <label htmlFor='range'>Value</label>
                                     <span>{state[property.name]}%</span>
                                 </div>
-                                <input name={property.name} onChange={inputHandle} value={state[property.name]} max={property.maxValue} type='range' />
+                                <input name={property.name} onChange={inputHandle} value={state[property.name]} max={property.maxValue} type='range' step={property.name === 'scale' ? '0.1' : '1'} />
                             </div>
                             <div className='rotate'>
                                 <label htmlFor=''>Rotate & Flip</label>

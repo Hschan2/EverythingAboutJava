@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 웹툰 검색기</title>
+    <style>
+        body {
+            width: 500px;
+        }
+
+        .search {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 4px 6px;
+        }
+
+        .submit {
+            border: none;
+            border-radius: 5px;
+            padding: 5px 7px;
+            background-color: #2DB400;
+            color: white;
+        }
+    </style>
+
+    <script>
+        function onSearch() {
+            const name = form.search.value;
+
+            if(name === "") alert("웹툰명을 입력해주세요.");
+            else location.href = "https://comic.naver.com/search.nhn?m=webtoon&keyword=" + name + "&type=all";
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form name="form" onsubmit="return onSearch()">
+        <input type="text" name="search" class="search" placeholder="웹툰명">
+        <button type="submit" class="submit">검색</button>
+    </form>
+</body>
+</html>

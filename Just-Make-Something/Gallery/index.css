@@ -1,0 +1,73 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.allContainer {
+    width: 100%;
+}
+
+.infoContainer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#instafeed-container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+#instafeed-container #instafeeds {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 11%;
+}
+
+#instafeed-container #instafeeds a {
+    width: 25%;
+    margin:5px;
+}
+
+#instafeed-container #instafeeds a img{
+    border:rgb(200, 200, 200) solid 1px;
+    border-radius:5px;
+    width: 100%;
+}
+
+.mainTitle {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 5px 0;
+    font-size: 30px;
+    color: tomato;
+    font-weight: bold;
+}
+
+.mainTitle img {
+    width: 25px;
+    height: 25px;
+}
+
+.Links {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.Links a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0 5px;
+}

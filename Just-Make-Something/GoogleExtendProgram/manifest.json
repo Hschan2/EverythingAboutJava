@@ -1,0 +1,12 @@
+{
+    "name": "네이버 웹툰 검색기",
+    "description": "네이버 웹툰 검색으로 바로 이동",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "manifest_version": 2,
+    "browser_action": {
+        "default_title": "네이버 웹툰 검색기",
+        "default_pop": "index.html",
+        "default_icon": "icon.png"
+    }
+}

@@ -1,0 +1,110 @@
+h1 {
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+p {
+    font-family: serif;
+    transition: 0.3s;
+}
+
+.SourceLink {
+    padding-top: 90px;
+    transition: 0.3s;
+}
+
+.SourceLink Button {
+    margin-top: 7px;
+    width: 120px;
+    height: 50px;
+    background: #FF9100;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-right: 5px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    font-size: 0.75rem;
+    line-height: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 810px) {
+    h1 {
+        font-size: 1.5rem;
+        transition: 0.3s;
+    }
+
+    p {
+        font-size: 0.7rem;
+        transition: 0.3s;
+    }
+    .SourceLink {
+        padding-top: 100px;
+        transition: 0.3s;
+    }
+    .SourceLink Button {
+        margin-top: 7px;
+        transition: 0.3s;
+        width: 95px;
+        height: 45px;
+        font-size: 0.7rem;
+        line-height: 12px;
+    }
+  }
+
+  @media screen and (max-width: 610px) {
+    h1 {
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+
+    p {
+        font-size: 0.7rem;
+        transition: 0.3s;
+    }
+    .SourceLink {
+        padding-top: 100px;
+        transition: 0.1s;
+    }
+    .SourceLink Button {
+        margin-top: 7px;
+        font-size: 0.2rem;
+        width: 15px;
+        height: 25px;
+        transition: 0.3s;
+        font-variant: small-caps;
+        text-align: center;
+        line-height: 7px;
+    }
+  }
+
+  @media only screen 
+  and (min-width: 375px) 
+  and (max-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    h1 {
+        font-size: 0.7rem;
+        transition: 0.3s;
+    }
+
+    p {
+        font-size: 0.4rem;
+        transition: 0.3s;
+    }
+    .SourceLink {
+        padding-top: 90px;
+        transition: 0.1s;
+    }
+    .SourceLink Button {
+        font-size: 7px;
+        width: 5px;
+        height: 28px;
+        transition: 0.3s;
+        font-variant: small-caps;
+        text-align: center;
+        line-height: 8px;
+    }
+}

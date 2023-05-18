@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "유튜브 영상 고정",
+    "version": "1.0",
+    "description": "유튜브 동영상 위치를 고정합니다.",
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}

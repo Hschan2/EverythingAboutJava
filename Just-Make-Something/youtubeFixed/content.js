@@ -1,19 +1,23 @@
-import "./content.css";
-
 // YouTube 영상을 고정시키는 함수
 function fixVideoPosition() {
-    const videoElement = document.querySelector("#player-theater-container");
-    if (videoElement) {
-      videoElement.classList.add("fixed-video");
-    }
+  const videoElement = document.querySelector("#player-theater-container");
+  if (videoElement) {
+    videoElement.style.position = "fixed";
+    videoElement.style.top = "0";
+    videoElement.style.left = "0";
+    videoElement.style.zIndex = "9999";
+  }
 }
 
 // YouTube 영상 고정 클래스를 제거하는 함수
 function unfixVideoPosition() {
-    const videoElement = document.querySelector("#player-theater-container");
-    if (videoElement) {
-      videoElement.classList.remove("fixed-video");
-    }
+  const videoElement = document.querySelector("#player-theater-container");
+  if (videoElement) {
+    videoElement.style.position = "";
+    videoElement.style.top = "";
+    videoElement.style.left = "";
+    videoElement.style.zIndex = "";
+  }
 }
 
 // 스크롤 이벤트 핸들러

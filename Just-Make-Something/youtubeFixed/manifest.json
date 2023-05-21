@@ -2,8 +2,13 @@
     "manifest_version": 3,
     "name": "유튜브 영상 고정",
     "version": "1.0",
-    "permissions": ["activeTab"],
+    "description": "유튜브에서 동영상을 보고 있을 때, 스크롤을 하면 동영상의 위치가 상단에 고정이 됩니다. 스크롤을 맨 위로 위치하면 고정 상태가 해제됩니다.",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["activeTab", "storage"],
     "icons": {
+        "60": "/icons8-fixed-60.png",
         "64": "/icons8-fixed-64.png"
     },
     "content_scripts": [

@@ -1,6 +1,7 @@
 // YouTube 영상을 고정시키는 함수
 function fixVideoPosition() {
   const videoElement = document.querySelector("#player-theater-container");
+
   if (videoElement) {
     videoElement.style.position = "fixed";
     videoElement.style.top = "0";
@@ -12,6 +13,7 @@ function fixVideoPosition() {
 // YouTube 영상 고정 클래스를 제거하는 함수
 function unfixVideoPosition() {
   const videoElement = document.querySelector("#player-theater-container");
+
   if (videoElement) {
     videoElement.style.position = "";
     videoElement.style.top = "";
@@ -27,7 +29,7 @@ function handleScroll() {
 
     if (scrollY > threshold) {
       fixVideoPosition();
-    } else {
+    } else if (scrollY === 0) {
       unfixVideoPosition();
     }
 }

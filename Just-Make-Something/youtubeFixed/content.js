@@ -1,6 +1,6 @@
 // YouTube 영상을 고정시키는 함수
 function fixVideoPosition() {
-  const videoElement = document.querySelector("#player-theater-container");
+  const videoElement = document.querySelector("#player-wide-container");
 
   if (videoElement) {
     videoElement.style.position = "fixed";
@@ -12,7 +12,7 @@ function fixVideoPosition() {
 
 // YouTube 영상 고정 클래스를 제거하는 함수
 function unfixVideoPosition() {
-  const videoElement = document.querySelector("#player-theater-container");
+  const videoElement = document.querySelector("#player-wide-container");
 
   if (videoElement) {
     videoElement.style.position = "";
@@ -24,14 +24,17 @@ function unfixVideoPosition() {
 
 // 스크롤 이벤트 핸들러
 function handleScroll() {
-    const scrollY = window.scrollY;
-    const threshold = 100; // 맨 위로 올릴 때 고정 클래스를 제거할 스크롤 임계값
+  const videoElement = document.querySelector("#player-wide-container");
+  const scrollY = window.scrollY;
+  const threshold = 100; // 맨 위로 올릴 때 고정 클래스를 제거할 스크롤 임계값
 
+  if (videoElement) {
     if (scrollY > threshold) {
       fixVideoPosition();
-    } else if (scrollY === 0) {
+    } else if (scrollY <= threshold) {
       unfixVideoPosition();
     }
+  }
 }
 
 // 스크롤 이벤트 리스너 등록

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "RGB 값 찾기",
   "version": "1.0",
-  "description": "버튼을 클릭하고 원하는 위치의 색상을 확인하세요.",
+  "description": "버튼을 클릭하고 원하는 위치의 색상 값을 확인하세요.",
   "background": {
     "service_worker": "background.js"
   },

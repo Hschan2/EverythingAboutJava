@@ -8,18 +8,21 @@ RGB 값 찾기 확장 프로그램은 웹 브라우저에서 사용하는 페이
 
 원하는 색상을 클릭하면 모달창으로 RGB 값을 출력합니다. 복사해서 사용하세요.   
 
-<div style="display: flex; justify-content: center; align-items: center;">
-    <img src="./main.PNG" style="margin-right: 5px;">
-    <img src="./pick.PNG" style="margin-right: 5px;">
-    <img src="./check.PNG">
-</div>
+#### 기본화면
+![기본화면](https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/main.PNG?raw=true)
+
+#### 색상 선택
+![색상선택](https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/pick.PNG?raw=true)
+
+#### 색상 값 확인
+![색상값확인](https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/check.PNG?raw=true)
 
 <br/>
 
 ## RGB 값 찾기 확장 프로그램 개발자
 
 ### 웹
-| [홍성찬](https://github.com/Hschan2) |.
+| [홍성찬](https://github.com/Hschan2) |
 | :---: |
 | ![](https://avatars.githubusercontent.com/u/39434913?v=4) |
 | RGB 값 찾기 확장 프로그램 개발 |

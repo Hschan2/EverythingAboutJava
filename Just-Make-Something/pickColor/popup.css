@@ -91,10 +91,10 @@ footer p {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 50% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 300px;
+  width: 190px;
 }
 
 .close {
@@ -104,7 +104,7 @@ footer p {
   font-weight: bold;
   cursor: pointer;
   position: absolute;
-  top: 55px;
+  top: 35%;
   right: 20px;
   transition: 0.3s ease;
 }

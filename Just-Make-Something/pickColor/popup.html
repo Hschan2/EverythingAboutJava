@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./popup.css">
+    <title>Find RGB</title>
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <h2 class="title">FIND RGB</h2>
+        </header>
+        <main class="contents">
+            <img src="./pipette.gif" alt="Pipette">
+            <p class="subtitle">클릭 하나로 원하는 색상의 RGB 값을 확인할 수 있어요.</p>
+            <button id="findColor" class="button">Find Color</button>
+        </main>
+        <footer>
+            <p>GIF File by FlatIcon</p>
+            <p>Copyright © 2023 Hong All rights reserved.</p>
+        </footer>
+    </section>
+
+    <!-- 모달창 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="colorValue"></p>
+        </div>
+    </div>
+
+    <script src="./popup.js"></script>
+</body>
+
+</html>

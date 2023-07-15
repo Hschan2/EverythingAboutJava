@@ -24,7 +24,7 @@ RGB 값 찾기 확장 프로그램은 웹 브라우저에서 사용하는 페이
 ### 웹
 | [홍성찬](https://github.com/Hschan2) |
 | :---: |
-| ![](https://avatars.githubusercontent.com/u/39434913?v=4) |
+| <img src="https://avatars.githubusercontent.com/u/39434913?v=4" width="100" height="100"> |
 | RGB 값 찾기 확장 프로그램 개발 |
 
 <br/>

@@ -15,10 +15,12 @@
 ## 유튜브 동영상 고정 확장 프로그램 개발자
 
 ### 웹
-| [홍성찬](https://github.com/Hschan2) |.
+| [홍성찬](https://github.com/Hschan2) |
 | :---: |
-| ![](https://avatars.githubusercontent.com/u/39434913?v=4) |
+| <img src="https://avatars.githubusercontent.com/u/39434913?v=4" width="100" height="100"> |
 | 유튜브 동영상 고정 확장 프로그램 개발 |
+
+
 
 <br/>
 <br/>
@@ -30,7 +32,7 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 #### 개발 도구
-![VSCode](https://img.shields.io/badge/VSCODE-007ACC?style=for-the-badge&logo=visual studio code&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 <br/>
 <br/>

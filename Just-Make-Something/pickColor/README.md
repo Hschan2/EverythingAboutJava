@@ -8,15 +8,6 @@ RGB 값 찾기 확장 프로그램은 웹 브라우저에서 사용하는 페이
 
 원하는 색상을 클릭하면 모달창으로 RGB 값을 출력합니다. 복사해서 사용하세요.   
 
-#### 기본화면
-![기본화면](https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/main.PNG?raw=true)
-
-#### 색상 선택
-![색상선택](https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/pick.PNG?raw=true)
-
-#### 색상 값 확인
-![색상값확인](https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/check.PNG?raw=true)
-
 <br/>
 
 ## RGB 값 찾기 확장 프로그램 개발자
@@ -63,7 +54,15 @@ src
 
 #### RGB 값 확인
 * 버튼 클릭 시, RGB 값을 확인할 수 있는 기능 실행
-    * 해당 기능으로 원하는 위치의 색상 값 확인 가능
+    * 해당 기능으로 원하는 위치의 색상 값 확인 가능   
+
+| 화면 | 이미지 | 기능 |
+| :---: | :---: | :---: |
+| 메인 | <img src="https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/main.PNG?raw=true" width="100" height="100"> | 기본화면 |
+| 색상선택 | <img src="https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/pick.PNG?raw=true" width="100" height="100"> | 브라우저 내 픽셀 부분 색상 선택 |
+| RGB 값 확인 | <img src="https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/check.PNG?raw=true" width="100" height="100"> | 모달창으로 RGB 값 확인 |
+
+<br />
 
 ## 이 확장 프로그램을 개발한 이유
 프로그래밍을 하거나, 디자인을 할 때 원하는 색상을 찾는 것이 쉽지 않았습니다. 개인적인 상황으로 로고의 색상을 검색하거나, 원하는 색상이 있는 이미지를 다운로드하여 포토샵에서 확인하는 경우가 많았습니다. 이러한 불편함을 해소하고자 RGB 값 확인할 수 있는 이 확장 프로그램을 개발하였습니다.   

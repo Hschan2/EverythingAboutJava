@@ -1,8 +1,10 @@
 import './App.css';
-import { lyrics } from './constants/pop'
+import Top from './components/top';
+import { kor, lyrics } from './constants/pop'
 
 function App() {
   const getLyrics = lyrics.split('\n').map(v => v.trim()).filter(v => v.length > 0);
+  const getKor = kor.split('\n').map(v => v.trim()).filter(v => v.length > 0);
 
   const speakText = (e) => {
     e.preventDefault();
@@ -15,8 +17,12 @@ function App() {
 
   return (
     <div className="App">
+      <Top />
       {getLyrics?.map((lyrics, index) => (
-        <p key={index} onClick={speakText}>{lyrics}</p>
+        <div key={index} className='container'>
+          <p onClick={speakText} className="speak">{lyrics}</p>
+          <p>{getKor[index]}</p>
+        </div>
       ))}
     </div>
   );

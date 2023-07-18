@@ -1,7 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  width: 600px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  margin: 3px 0;
+  padding: 3px 0;
 }
 
 p {
+  margin: 2px 0;
+  padding: 2px 0;
+}
+
+.speak {
   cursor: pointer;
 }

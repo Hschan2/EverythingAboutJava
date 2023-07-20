@@ -82,7 +82,7 @@ window.onload = function () {}
 
 자세한 과정은 아래의 블로그에 작성해두었다.   
 
-[이 문제 회고](https://hseongchan2.tistory.com/)
+[이 문제 회고](https://hseongchan2.tistory.com/103)
 
 ## 프로젝트 주요 타겟
 * 브라우저에서 원하는 색상을 쉽게 확인하고 싶은 사람

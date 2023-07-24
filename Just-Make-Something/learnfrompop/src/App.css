@@ -8,12 +8,32 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .App {
   width: 600px;
+  height: 500px;
   text-align: center;
   padding: 0 0 10px 0;
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.App::-webkit-scrollbar {
+  width: 8px;
+}
+
+.App::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.App::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 
 .container {
@@ -31,8 +51,8 @@ p {
 
 .modal-container {
   position: fixed;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   z-index: 999;
@@ -40,8 +60,8 @@ p {
 
 .modal-backdrop {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -49,20 +69,39 @@ p {
 
 .modal-content {
   width: 300px;
-  height: auto;
+  height: 300px;
 
   z-index: 999;
 
   position: absolute;
-  top: 50%;
-  left: 20%;
+  bottom: -50px;
+  right: -150px;
   transform: translate(-50%, -50%);
 
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid black;
   border-radius: 8px;
 
-  padding: 10px 0;
+  padding: 10px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: auto;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 
 .close {
@@ -74,6 +113,7 @@ p {
   border-radius: 5px;
   right: 7px;
   top: 7px;
+  cursor: pointer;
 }
 
 .kr {

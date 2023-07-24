@@ -3,17 +3,21 @@
   padding: 0;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
-  text-align: center;
   width: 600px;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  padding: 0 0 10px 0;
 }
 
 .container {
   margin: 3px 0;
-  padding: 3px 0;
 }
 
 p {
@@ -22,5 +26,69 @@ p {
 }
 
 .speak {
+  cursor: pointer;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 300px;
+  height: auto;
+
+  z-index: 999;
+
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid black;
+  border-radius: 8px;
+
+  padding: 10px 0;
+}
+
+.close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  right: 7px;
+  top: 7px;
+}
+
+.kr {
+  font-size: 12px;
+}
+
+.modalButton {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 999;
+  width: 70px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
   cursor: pointer;
 }

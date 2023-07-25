@@ -1,5 +1,5 @@
 import React from 'react'
-import { kor, lyrics } from '../constants/pop';
+import { lyrics } from '../constants/pop';
 import { speakText } from '../constants/SpeakVoice';
 
 const GetLyrics = () => {

@@ -1,6 +1,6 @@
 // YouTube 영상을 고정시키는 함수
 function fixVideoPosition() {
-  const videoElement = document.querySelector("#player-wide-container");
+  const videoElement = document.querySelector("#full-bleed-container");
   const playerElement = document.querySelector("#player");
 
   if (videoElement) {
@@ -11,15 +11,18 @@ function fixVideoPosition() {
   }
   if (playerElement) {
     playerElement.style.position = "fixed";
+    playerElement.style.width = "95%";
+    playerElement.style.height = "95%";
     playerElement.style.top = "1";
     playerElement.style.left = "1";
+    playerElement.style.borderRadius = "16px";
     playerElement.style.zIndex = "9999";
   }
 }
 
 // YouTube 영상 고정 클래스를 제거하는 함수
 function unfixVideoPosition() {
-  const videoElement = document.querySelector("#player-wide-container");
+  const videoElement = document.querySelector("#full-bleed-container");
   const playerElement = document.querySelector("#player");
 
   if (videoElement || playerElement) {
@@ -30,15 +33,18 @@ function unfixVideoPosition() {
   }
   if (playerElement) {
     playerElement.style.position = "";
+    playerElement.style.width = "";
+    playerElement.style.height = "";
     playerElement.style.top = "";
     playerElement.style.left = "";
+    playerElement.style.border_radius = "";
     playerElement.style.zIndex = "";
   }
 }
 
 // 스크롤 이벤트 핸들러
 function handleScroll() {
-  const videoElement = document.querySelector("#player-wide-container");
+  const videoElement = document.querySelector("#full-bleed-container");
   const playerElement = document.querySelector("#player");
   const scrollY = window.scrollY;
   const threshold = 100; // 맨 위로 올릴 때 고정 클래스를 제거할 스크롤 임계값

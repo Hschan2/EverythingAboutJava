@@ -74,8 +74,8 @@ p {
   z-index: 999;
 
   position: fixed;
-  bottom: 35%;
-  right: 35%;
+  bottom: 100px;
+  right: 30px;
 
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid black;

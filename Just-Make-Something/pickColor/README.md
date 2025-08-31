@@ -61,6 +61,7 @@ src
 | 메인 | <img src="https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/main.PNG?raw=true" width="150"> | 기본화면 |
 | 색상선택 | <img src="https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/pick.PNG?raw=true" width="100"> | 브라우저 내 픽셀 부분 색상 선택 |
 | RGB 값 확인 | <img src="https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/check.PNG?raw=true" width="150"> | 모달창으로 RGB 값 확인 |
+| RGB 값 복사 | <img src="https://github.com/Hschan2/EverythingAboutJava/blob/master/Just-Make-Something/pickColor/copy.PNG?raw=true" width="150"> | 모달창으로 RGB 값 확인 |
 
 <br />
 
